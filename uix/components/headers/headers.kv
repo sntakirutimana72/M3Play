@@ -1,0 +1,53 @@
+#: import CloseBTComponent uix.components.buttons.CloseBTComponent
+
+<TitleElement>:
+    valign: 'middle'
+    font_size: '13sp'
+    font_name: 'courbd'
+    padding: ('10sp', 0)
+    text_size: self.size
+    disabled_color: self.color
+
+
+<AppControlsContainer>:
+    padding: '6dp', '2dp'
+    size_hint_x: None
+    spacing: '2sp'
+    width: '79dp'
+
+    MinimizeBTComponent:
+        id: minimize
+        on_release: root.on_minimize()
+        graffiti_color: root.graffiti_color
+        toggle_graffiti: root.toggle_graffiti if not self.disabled else .07
+    ResizeBTComponent:
+        id: resize
+        on_release: root.on_resize()
+        graffiti_color: root.graffiti_color
+        toggle_graffiti: root.toggle_graffiti if not self.disabled else .07
+    CloseBTComponent:
+        id: close
+        on_release: root.on_close()
+        graffiti_color: root.graffiti_color
+        toggle_graffiti: root.toggle_graffiti
+
+
+<HeadBarComponent>:
+    size_hint_y: None
+    height: '25dp'
+
+    # graffiti
+    GraffitiFeature:
+        size_hint_x: None
+        width: '10dp'
+
+    # Title-part
+    TitleElement:
+        text: root.title
+        color: root.title_color
+
+    # Button Controls Container
+    AppControlsContainer:
+        id: header_controls
+        graffiti_color: root.graffiti_color
+        disable_controls: root.disable_controls

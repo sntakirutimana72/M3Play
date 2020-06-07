@@ -1,0 +1,24 @@
+<PlaylistManagerComponent>:
+    spacing: '2dp'
+    padding: '5dp'
+    size_hint_y: None
+    orientation: 'vertical'
+    height: 0 if self.parent is None else dp(max(self.parent.height - 128, 0))
+
+    BoxLayout:
+        size_hint_y: None
+        height: '34dp'
+
+    ScrollingLayout:
+        GLayout:
+            cols: 1
+            id: playlist
+            spacing: '1dp'
+            padding: '4dp'
+            size_hint_y: None
+            background_color: [.17, .17, .15, 1]
+            height: max(self.parent.height, self.minimum_height)
+
+    BoxLayout:
+        size_hint_y: None
+        height: '20dp'
