@@ -1,22 +1,32 @@
 __all__ = (
-    'stringedArray_2_array',  # 'get_metadata',
+    'stringedArray_2_array',  'get_metadata',
     'format_timeframe', 'write_cache', 'read_cache'
 )
 
 import json
+from pathlib import Path
+from tinytag import TinyTag
 
 
-def stringedArray_2_array(stringed: str, converter=float):
+def stringedArray_2_array(s_array: str, parser=float):
     """ This function converts a stringed-like array or list of numbers into a real type list.
 
         ..A stringed-like list to be converted must look like `[.1, 1]`
     """
-    return [converter(digit) for digit in stringed.strip(' [] ').split(',')]
+    return (parser(digit) for digit in s_array.strip(' [] ').split(','))
 
 
-def get_metadata(source: str) -> dict:
-    from tinytag import TinyTag
-    return TinyTag.get(source).as_dict()
+def get_metadata(source: Path):
+    """ Access media metadata and return some like album, artist, duration, ... """
+    metadata = TinyTag.get(source)
+
+    return {
+        'name': source.stem,
+        'Genre': metadata.genre,
+        'Album': metadata.album,
+        'Artist': metadata.artist,
+        'suffix': source.suffix[1:],
+    }, metadata.duration
 
 
 def format_timeframe(timeframe: float):

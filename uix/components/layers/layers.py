@@ -5,6 +5,7 @@ __all__ = (
 
 from pathlib import Path
 from kivy.lang import Builder
+from kivy.uix.label import Label
 from kivy.uix.widget import Widget
 from kivy.animation import Animation
 from kivy.uix.boxlayout import BoxLayout
@@ -62,6 +63,21 @@ class ScrollableLabelComponent(ScrollView, Hovering):
 
     cycleTime = NumericProperty(None, allownone=True)
     mode = OptionProperty('manual', options=('manual', 'auto'))
+
+    class ScrollableLabel(Label):
+        pass
+
+    def __init__(self, **kwargs):
+        super(ScrollableLabelComponent, self).__init__(**kwargs)
+        self._view_port = self.ScrollableLabel(text=self.text, color=self.color, disabled_color=self.color)
+        self._view_port.bind(texture_size=self._on_texture_update)
+        self.add_widget(self._view_port)
+
+    def on_text(self, *largs):
+        self._view_port.text = largs[1]
+
+    def on_color(self, *largs):
+        self._view_port.color = self._view_port.disabled_color = largs[1]
 
     def on_mode(self, _, state):
         if state == 'auto':

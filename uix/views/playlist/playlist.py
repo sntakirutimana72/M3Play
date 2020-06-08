@@ -56,7 +56,7 @@ class PlaylistManagerComponent(BLayout, Hovering):
 
     def do_play(self, next_inline):
         if next_inline.path.is_file():
-            self.root.do_play(str(next_inline.path))
+            self.root.do_play(next_inline.path)
         else:
             """ Invoke self-removal process """
 

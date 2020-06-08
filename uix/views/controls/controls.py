@@ -25,23 +25,27 @@ class FooterDisplayComponent(BLayout):
         _scheduler = None
 
         def _animate_metas(self, *_):
-            self.next()
+            self.transition.direction = 'down'
+            current = self.current
+            self.current = {
+                'Artist': 'Album',
+                'Album': 'Genre',
+                'Genre': 'Artist'
+            }[current]
 
         def set_metadata(self, metadata):
-            for name in metadata:
+            for name in ('Artist', 'Album', 'Genre'):
                 self.add_widget(
-                    FooterDisplayComponent.MetadataElement(text=metadata[name], name=name)
+                    FooterDisplayComponent.MetadataElement(
+                        text=f'{name}: {metadata[name]}', name=f'{name}'
+                    )
                 )
-            self._scheduler = Clock.schedule_interval(self._animate_metas, 2.25)
+            self._scheduler = Clock.schedule_interval(self._animate_metas, 5.8)
 
         def clear_all(self):
             self._scheduler.cancel()
             self._scheduler = None
             self.clear_widgets()
-
-    def clear_all(self):
-        self.ids.album.text = self.ids.artist.text = ''
-        self.ids.suffix.text = self.ids.name.text = ''
 
     def on_toggle_size(self, *_):
         pass
@@ -49,11 +53,17 @@ class FooterDisplayComponent(BLayout):
     def on_toggle_playlist(self, *_):
         pass
 
-    def display_metadata(self, data):
-        self.ids.album.text = data.album
-        self.ids.artist.text = data.artist
-        self.ids.suffix.text = data.suffix
-        self.ids.name.text = data.name.title()
+    def clear_metadata(self):
+        self.ids.meta_com.clear_all()
+        self.ids.suffix.text = ''
+        self.ids.name.text = 'No Track Playing'
+
+    def display_metadata(self, metadata):
+        self.ids.name.text = metadata['name'].title()
+        self.ids.suffix.text = metadata['suffix'].upper()
+        del metadata['name']
+        del metadata['suffix']
+        self.ids.meta_com.set_metadata(metadata)
 
 
 class TimeCounterComponent(BLayout):

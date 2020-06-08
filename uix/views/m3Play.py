@@ -1,4 +1,5 @@
 import time
+import math
 from utils.cfg import cfg_getter
 from threading import Thread, Lock
 from utils.workers import OpsWorker
@@ -7,9 +8,9 @@ from kivy.core.audio import SoundLoader
 from kivy.clock import mainthread, Clock
 from uix.components.layers import BLayout
 from utils.loggers import ilogging, elogging
-from utils.helpers import stringedArray_2_array
 from uix.components.headers import AppHeadBarComponent
 from uix.views.playlist import PlaylistManagerComponent
+from utils.helpers import stringedArray_2_array, get_metadata
 from uix.views.controls import ModularControlsComponent, FooterDisplayComponent
 
 
@@ -26,6 +27,7 @@ class M3Play(BLayout, keypad_routine, minimize_routine):
 
     def _resume(self):
         self._modular.play()
+        self._flag_all_motion_responses(True)
         Clock.schedule_interval(self._ready_all_tools_from_duration, .01)
 
     def _run_get_pos(self):
@@ -33,16 +35,13 @@ class M3Play(BLayout, keypad_routine, minimize_routine):
         pos_getter.daemon = True
         pos_getter.start()
 
-    def _on_duration(self, value):
-        self._duration = value
-        self._controls.time_display.set_last(value)
-
     @property
     def playlist(self):
         return self._playlist_manager
 
     def _get_pos(self):
         try:
+            time.sleep(.005)
             while self._is_alive() and not self._state:
                 with self._current_pos_lock:
                     @mainthread
@@ -89,12 +88,13 @@ class M3Play(BLayout, keypad_routine, minimize_routine):
     def _set_pause(self):
         self._state = 'pause'
         self._options['force'] = None
+        self._controls.play_pause.toggle()
 
     def _async_stop(self):
-        self._flag_all_controls(True)
+        self._flag_all_motion_responses(True)
         with self._current_pos_lock:
-            self._flag_all_controls(False)
             self._modular.stop()
+            self._flag_all_motion_responses(False)
 
     def _on_stop(self, *_):
         if self._is_alive():
@@ -126,16 +126,16 @@ class M3Play(BLayout, keypad_routine, minimize_routine):
 
         largs[-1].toggle()
 
-    def __play__(self, source):
+    def __play__(self, source: object):
         try:
-            self._flag_all_controls(True)
+            self._flag_all_motion_responses(True)
             if self._modular is None:
-                self._modular = SoundLoader().load(source)
+                self._modular = SoundLoader().load(str(source))
                 if isinstance(self._modular, SoundLoader):
                     raise Exception('Unable to load source file')
                 self._flag_modular(True)
             else:
-                self._modular.source = source
+                self._modular.source = str(source)
             self._modular.play()
         except Exception as e:
             ilogging(e)
@@ -143,29 +143,41 @@ class M3Play(BLayout, keypad_routine, minimize_routine):
             if isinstance(self._modular, SoundLoader):
                 elogging()
                 self._modular = None
-                self._flag_all_controls(False)
+                self._flag_all_motion_responses(False)
             else:
                 self._modular.volume = 0
+                self._metadata, self._duration = get_metadata(source)
                 Clock.schedule_interval(self._ready_all_tools_from_duration, .01)
 
     def _ready_all_tools_from_duration(self, _):
-        duration = self._modular.length
-        if type(duration) is float and duration > 0:
+        length_1, length_2 = self._modular.length, self._duration
+        if math.ceil(length_1) >= math.floor(length_2):
             Clock.unschedule(self._ready_all_tools_from_duration)
 
             if self._state:
                 self._on_seek(self._current_pos)
                 self._state = None
+                self._controls.disabled = False
+                self._controls.play_pause.toggle()
+                self._controls.disabled = True
             else:
                 self._update_UI_states('play')
-                self._on_duration(duration)
+                self._now_playing()
 
             self._modular.volume = self._controls.volume
             self._run_get_pos()
-            self._flag_all_controls(False)
+            self._flag_all_motion_responses(False)
 
-    def _flag_all_controls(self, flag):
-        self._controls.disabled = self._footer.disabled = flag
+    def _now_playing(self):
+        metadata = self._metadata
+        self._metadata = None
+        self._controls.time_display.set_last(self._duration)
+        self._footer.display_metadata(metadata)
+
+    def _flag_all_motion_responses(self, flag):
+        self._controls.disabled = \
+            self._footer.disabled = \
+            self._playlist_manager.disabled = flag
 
     def _add_UI_components(self):
         """ This method initiates UI components of the this class instance """
@@ -248,11 +260,9 @@ class M3Play(BLayout, keypad_routine, minimize_routine):
                 else:
                     self._load_next()
             else:
-                self._flag_all_controls(True)
                 self._set_pause()
                 self._async_stop()
                 self._modular.volume = 0
-                self._flag_all_controls(False)
         else:
             self._load_next()
 
@@ -263,6 +273,7 @@ class M3Play(BLayout, keypad_routine, minimize_routine):
             self._options['force'] = False
             self._controls.time_display.activate()
         else:
+            self._footer.clear_
             self._controls.time_display.deactivate()
 
     def _flag_modular(self, flag=False):

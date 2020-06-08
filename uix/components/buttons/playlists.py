@@ -14,7 +14,7 @@ Builder.load_string("""
     padding: '8dp', 0
     cover: [0, 0, 0, 0]
     size_hint: None, None
-    color: [0, 0, .07, 1]
+    color: [0, 0, .05, 1]
     focus_color: [0, .6, .3, .1]
     hover_color: [.6, .3, 0, .1]
     text_size: self.width, None

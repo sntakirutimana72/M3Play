@@ -27,14 +27,10 @@
             points: [self.x, self.top, self.right, self.top]
 
 
-<ScrollableLabelComponent>:
-    Label:
-        bold: True
-        text: root.text
-        valign: 'middle'
-        color: root.color
-        size_hint_x: None
-        text_size: None, self.height
-        size: self.texture_size
-        font_size: dp(min(*self.size) // 2 - 1)
-        on_texture_size: root._on_texture_update(*args)
+<ScrollableLabel>:
+    bold: True
+    valign: 'middle'
+    size_hint_x: None
+    text_size: None, self.height
+    size: self.texture_size
+    font_size: dp(min(*self.size) // 2 - 1)

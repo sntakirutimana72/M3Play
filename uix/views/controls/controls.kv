@@ -58,12 +58,14 @@
 <MetadataElement>:
     Label:
         bold: True
+        valign: 'middle'
         text: root.text
-        font_size: '10dp'
         padding: '5dp', 0
-        color: [0, 0, .1, 1]
+        color: [.06, .03, .07, 1]
+        disabled_color: self.color
         text_size: None, self.height
         size: self.texture_size
+        font_size: dp(min(*self.size) // 2 - 2)
 
 
 <FooterDisplayComponent>:
@@ -76,7 +78,16 @@
         icon_name: 'more.png'
         on_press: root.dispatch('on_toggle_playlist')
     MetadataComponent:
-        id: metadata
+        id: meta_com
+        size_hint_x: None
+        width: '120dp'
+    Label:
+        id: suffix
+        width: '40dp'
+        valign: 'middle'
+        size_hint_x: None
+        color: [0, 0, 0, 1]
+        font_size: dp(min(*self.size) // 2)
     ScrollableLabelComponent:
         id: name
     ControlBTComponent:

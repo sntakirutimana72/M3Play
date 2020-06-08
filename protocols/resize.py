@@ -16,4 +16,4 @@ def resize(window):
     else:
         win_size = window.size[0], 128
 
-    Animation(size=win_size, d=.12).start(window)
+    Animation(size=win_size, d=.2).start(window)
