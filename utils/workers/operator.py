@@ -59,8 +59,7 @@ class OpsWorker(EventDispatcher):
                 playlist = self._root.playlist
                 dropped_uix_interface = AudioFileComponent(
                     path=file_object,
-                    on_view=playlist.do_play,
-                    on_press=playlist.do_select
+                    on_view=playlist.do_play
                 )
                 playlist.playlist.add_widget(dropped_uix_interface)
 

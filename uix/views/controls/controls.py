@@ -34,6 +34,8 @@ class FooterDisplayComponent(BLayout):
             }[current]
 
         def set_metadata(self, metadata):
+            self.clear_widgets()
+
             for name in ('Artist', 'Album', 'Genre'):
                 self.add_widget(
                     FooterDisplayComponent.MetadataElement(

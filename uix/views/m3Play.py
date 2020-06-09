@@ -52,11 +52,6 @@ class M3Play(BLayout, keypad_routine, minimize_routine):
         finally:
             pass
 
-    def _on_next(self):
-        if self._is_alive():
-            self._loop_ignore = True
-            self._async_stop()
-
     def _is_alive(self):
         """ This method checks if the modular is working and its state is either `pause` or `play` """
         return self._modular and (self._modular.state == 'play' or self._state == 'pause')
@@ -64,7 +59,7 @@ class M3Play(BLayout, keypad_routine, minimize_routine):
     def _reset_all(self):
         self._flag_modular()
         self._state = self._current_pos = None
-        self._playlist_manager.clearToggle()
+        self._playlist_manager.clear_playingToggle()
         self._options['force'] = False
         self._modular = None
 
@@ -80,7 +75,7 @@ class M3Play(BLayout, keypad_routine, minimize_routine):
             self._reset_all()
 
         # Resetting :attr:`_go_where` to its default value
-        self._shift_ref = -1
+        self._shift_ref = 1
         # Resetting :attr:`_loop_ignore` to its default value
         if self._loop_ignore:
             self._loop_ignore = False
@@ -96,26 +91,37 @@ class M3Play(BLayout, keypad_routine, minimize_routine):
             self._modular.stop()
             self._flag_all_motion_responses(False)
 
+    def _now_playing(self):
+        metadata = self._metadata
+        self._metadata = None
+        self._controls.time_display.set_last(self._duration)
+        self._footer.display_metadata(metadata)
+
     def _on_stop(self, *_):
         if self._is_alive():
             self.__stop__(True)
 
-    def _on_previous(self):
+    def _on_next(self, *_):
         if self._is_alive():
-            self._shift_ref = 1
             self._loop_ignore = True
             self._async_stop()
-
-    def do_play(self, source):
-        self._prep_modular()
-        self.__play__(source)
 
     def _prep_modular(self):
         if self._is_alive():
             self.__stop__()
 
+    def do_play(self, source):
+        self._prep_modular()
+        self.__play__(source)
+
     def _on_seek(self, *largs):
         self._modular.seek(largs[-1] * self._duration)
+
+    def _on_previous(self, *_):
+        if self._is_alive():
+            self._shift_ref = -1
+            self._loop_ignore = True
+            self._async_stop()
 
     def _on_loop(self, *largs):
         self._options['loop'] = {
@@ -126,81 +132,35 @@ class M3Play(BLayout, keypad_routine, minimize_routine):
 
         largs[-1].toggle()
 
-    def __play__(self, source: object):
-        try:
-            self._flag_all_motion_responses(True)
-            if self._modular is None:
-                self._modular = SoundLoader().load(str(source))
-                if isinstance(self._modular, SoundLoader):
-                    raise Exception('Unable to load source file')
-                self._flag_modular(True)
-            else:
-                self._modular.source = str(source)
-            self._modular.play()
-        except Exception as e:
-            ilogging(e)
-        finally:
-            if isinstance(self._modular, SoundLoader):
-                elogging()
-                self._modular = None
-                self._flag_all_motion_responses(False)
-            else:
-                self._modular.volume = 0
-                self._metadata, self._duration = get_metadata(source)
-                Clock.schedule_interval(self._ready_all_tools_from_duration, .01)
-
-    def _ready_all_tools_from_duration(self, _):
-        length_1, length_2 = self._modular.length, self._duration
-        if math.ceil(length_1) >= math.floor(length_2):
-            Clock.unschedule(self._ready_all_tools_from_duration)
-
-            if self._state:
-                self._on_seek(self._current_pos)
-                self._state = None
-                self._controls.disabled = False
-                self._controls.play_pause.toggle()
-                self._controls.disabled = True
-            else:
-                self._update_UI_states('play')
-                self._now_playing()
-
-            self._modular.volume = self._controls.volume
-            self._run_get_pos()
-            self._flag_all_motion_responses(False)
-
-    def _now_playing(self):
-        metadata = self._metadata
-        self._metadata = None
-        self._controls.time_display.set_last(self._duration)
-        self._footer.display_metadata(metadata)
-
-    def _flag_all_motion_responses(self, flag):
-        self._controls.disabled = \
-            self._footer.disabled = \
-            self._playlist_manager.disabled = flag
-
     def _add_UI_components(self):
         """ This method initiates UI components of the this class instance """
+        # Outer Layout
+        secondary_layout = BLayout(
+            spacing='1dp', padding='1dp', orientation='vertical',
+            background_color=self.border
+        )
         # Instantiate HeadBar Component
-        self.add_widget(AppHeadBarComponent())
+        secondary_layout.add_widget(AppHeadBarComponent())
         # Adding modular-controls to root widget
         self._controls = ModularControlsComponent(
-            background_color=self.background_color,
+            background_color=self.border,
             on_seek=self._on_seek, on_shuffle=self._on_shuffle,
             on_previous=self._on_previous, on_play_pause=self._on_play_pause,
             on_stop=self._on_stop, on_loop=self._on_loop, on_next=self._on_next
         )
         self._controls.bind(volume=self._on_adjust_volume)
-        self.add_widget(self._controls)
+        secondary_layout.add_widget(self._controls)
         # Creating & adding playlist-manager to root widget
         self._playlist_manager = PlaylistManagerComponent(root=self)
-        self.add_widget(self._playlist_manager)
+        secondary_layout.add_widget(self._playlist_manager)
         # Creating & adding footer-display to root-widget
         self._footer = FooterDisplayComponent(
             on_toggle_playlist=self._on_toggle_playlist,
             on_toggle_size=self._on_toggle_view
         )
-        self.add_widget(self._footer)
+        secondary_layout.add_widget(self._footer)
+        # Finally add the secondary layer to root itself
+        self.add_widget(secondary_layout)
 
     def _on_toggle_view(self, *_):
         pass
@@ -217,9 +177,12 @@ class M3Play(BLayout, keypad_routine, minimize_routine):
 
     def _set_initial_states(self):
         try:
-            self.background_color = stringedArray_2_array(
-                cfg_getter('MAIN', 'background')
-            )
+            colors = []
+            for option, value in cfg_getter('MAIN'):
+                colors.append(stringedArray_2_array(value))
+            self.background_color, self.border = colors
+            del colors
+
             self._options['force'] = False
 
             for name, state in cfg_getter('MODULAR'):
@@ -266,6 +229,29 @@ class M3Play(BLayout, keypad_routine, minimize_routine):
         else:
             self._load_next()
 
+    def __play__(self, source: object):
+        try:
+            self._flag_all_motion_responses(True)
+            if self._modular is None:
+                self._modular = SoundLoader().load(str(source))
+                if isinstance(self._modular, SoundLoader):
+                    raise Exception('Unable to load source file')
+                self._flag_modular(True)
+            else:
+                self._modular.source = str(source)
+            self._modular.play()
+        except Exception as e:
+            ilogging(e)
+        finally:
+            if isinstance(self._modular, SoundLoader):
+                elogging()
+                self._modular = None
+                self._flag_all_motion_responses(False)
+            else:
+                self._modular.volume = 0
+                self._metadata, self._duration = get_metadata(source)
+                Clock.schedule_interval(self._ready_all_tools_from_duration, .01)
+
     def _update_UI_states(self, state):
         self._controls.play_pause.toggle()
 
@@ -273,7 +259,7 @@ class M3Play(BLayout, keypad_routine, minimize_routine):
             self._options['force'] = False
             self._controls.time_display.activate()
         else:
-            self._footer.clear_
+            self._footer.clear_metadata()
             self._controls.time_display.deactivate()
 
     def _flag_modular(self, flag=False):
@@ -288,14 +274,13 @@ class M3Play(BLayout, keypad_routine, minimize_routine):
 
     def __init__(self, *largs, **kwargs):
         super(M3Play, self).__init__(**kwargs)
-        self.padding = ('2dp', 0, '2dp', '2dp')
-        self.orientation = 'vertical'
-        self.spacing = '1dp'
+        self.border = None
+        self.padding = '2dp'
 
         self._state = None
         self._options = {}
         self._footer = None
-        self._shift_ref = -1
+        self._shift_ref = 1
         self._modular = None
         self._metadata = None
         self._controls = None
@@ -320,3 +305,27 @@ class M3Play(BLayout, keypad_routine, minimize_routine):
             while _loop is None:
                 _loop = handler.loop
             _loop.call_soon_threadsafe(handler.submit_startup_load, cli_inputs)
+
+    def _flag_all_motion_responses(self, flag):
+        self._controls.disabled = \
+            self._footer.disabled = \
+            self._playlist_manager.disabled = flag
+
+    def _ready_all_tools_from_duration(self, _):
+        length_1, length_2 = self._modular.length, self._duration
+        if math.ceil(length_1) >= math.floor(length_2):
+            Clock.unschedule(self._ready_all_tools_from_duration)
+
+            if self._state:
+                self._on_seek(self._current_pos)
+                self._state = None
+                self._controls.disabled = False
+                self._controls.play_pause.toggle()
+                self._controls.disabled = True
+            else:
+                self._update_UI_states('play')
+                self._now_playing()
+
+            self._modular.volume = self._controls.volume
+            self._run_get_pos()
+            self._flag_all_motion_responses(False)

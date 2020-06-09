@@ -5,6 +5,7 @@
     size_hint_x: None
     font_name: 'courbd'
     color: [0, 0, .1, .7]
+    disabled_color: self.color
     text_size: None, self.size[1]
     font_size: dp(min(*self.size) // 2 + 1)
     width: max(self.texture_size[0], dp(50))
@@ -33,6 +34,7 @@
         font_size: '11dp'
         size_hint_x: None
         color: [0, 0, .08, 1]
+        disabled_color: self.color
         text: '{:.1f}[color=101007]%[/color]'.format(100 * vol_stat.value_ratio)
 
 
@@ -61,10 +63,9 @@
         valign: 'middle'
         text: root.text
         padding: '5dp', 0
-        color: [.06, .03, .07, 1]
+        color: [0, 0, 0, 1]
         disabled_color: self.color
-        text_size: None, self.height
-        size: self.texture_size
+        text_size: self.size
         font_size: dp(min(*self.size) // 2 - 2)
 
 
@@ -83,11 +84,12 @@
         width: '120dp'
     Label:
         id: suffix
+        bold: True
         width: '40dp'
         valign: 'middle'
         size_hint_x: None
         color: [0, 0, 0, 1]
-        font_size: dp(min(*self.size) // 2)
+        font_size: dp(min(*self.size) // 2 - 1)
     ScrollableLabelComponent:
         id: name
     ControlBTComponent:
@@ -101,14 +103,14 @@
     size_hint_y: None
     spacing: '10dp'
     padding: '4dp'
-    height: '72dp'
+    height: '70dp'
 
     TimeCounterComponent:
         id: time_display
         on_seek: root.dispatch('on_seek', args[-1])
     BoxLayout:
         spacing: '10dp'
-        padding: '17dp', '4dp'
+        padding: '17dp', '3dp'
 
         ControlBTComponent:
             icon_name: 'stop.png'

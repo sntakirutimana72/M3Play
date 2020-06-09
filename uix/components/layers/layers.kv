@@ -5,26 +5,6 @@
         Rectangle:
             pos: self.pos
             size: self.size
-        Color:
-            rgba: self.left_border_color
-        SmoothLine:
-            width: self.border_width
-            points: [*self.pos, self.x, self.top]
-        Color:
-            rgba: self.right_border_color
-        SmoothLine:
-            width: self.border_width
-            points: [self.right, self.y, self.right, self.top]
-        Color:
-            rgba: self.down_border_color
-        SmoothLine:
-            width: self.border_width
-            points: [*self.pos, self.right, self.y]
-        Color:
-            rgba: self.top_border_color
-        SmoothLine:
-            width: self.border_width
-            points: [self.x, self.top, self.right, self.top]
 
 
 <ScrollableLabel>:

@@ -4,6 +4,7 @@ __all__ = (
 )
 
 from pathlib import Path
+from kivy.clock import Clock
 from kivy.lang import Builder
 from kivy.uix.label import Label
 from kivy.uix.widget import Widget
@@ -21,14 +22,10 @@ Builder.load_file(str(Path(__file__).parent / 'layers.kv'))
 
 
 class Layouts(Widget):
-    border_width = NumericProperty(1)
+    border = ListProperty(None)
     hover_color = ListProperty(None)
     focus_color = ListProperty(None)
     background_color = ListProperty([0, 0, 0, 0])
-    top_border_color = ListProperty([0, 0, 0, 0])
-    down_border_color = ListProperty([0, 0, 0, 0])
-    left_border_color = ListProperty([0, 0, 0, 0])
-    right_border_color = ListProperty([0, 0, 0, 0])
 
 
 class ScrollingLayout(ScrollView):
@@ -51,27 +48,23 @@ class FLayout(FloatLayout, Layouts):
 
 
 class ScrollableLabelComponent(ScrollView, Hovering):
-    __loader__ = None
-    __loading__ = None
-    __schedule__ = None
-
-    effect_cls = ObjectProperty(OpacityScrollEffect)
-    bar_inactive_color = bar_color = [0, 0, 0, 0]
-
+    _isLoading = None
+    _animation_loader = None
+    _animation_scheduler = None
     color = ListProperty([0, 0, .1, 1])
     text = StringProperty('No Track Playing')
+    bar_inactive_color = bar_color = [0, 0, 0, 0]
+    effect_cls = ObjectProperty(OpacityScrollEffect)
+    restart_time = NumericProperty(20, allownone=True)
 
-    cycleTime = NumericProperty(None, allownone=True)
-    mode = OptionProperty('manual', options=('manual', 'auto'))
+    def on_hover(self):
+        if self._isLoading is None:
+            self._start_animation()
 
-    class ScrollableLabel(Label):
-        pass
-
-    def __init__(self, **kwargs):
-        super(ScrollableLabelComponent, self).__init__(**kwargs)
-        self._view_port = self.ScrollableLabel(text=self.text, color=self.color, disabled_color=self.color)
-        self._view_port.bind(texture_size=self._on_texture_update)
-        self.add_widget(self._view_port)
+    def _loopTime(self, *_):
+        if _:
+            return self._view_port.width * 35 / 800
+        return self.width * 35 / 800
 
     def on_text(self, *largs):
         self._view_port.text = largs[1]
@@ -79,58 +72,60 @@ class ScrollableLabelComponent(ScrollView, Hovering):
     def on_color(self, *largs):
         self._view_port.color = self._view_port.disabled_color = largs[1]
 
-    def on_mode(self, _, state):
-        if state == 'auto':
-            if self.children and self.__loading__ is None:
-                self.__restart__()
-        else:
-            if self.children and self.__schedule__:
-                self.__unschedule__()
-
-    def __unschedule__(self):
-        self.__schedule__.cancel()
-        self.__schedule__ = None
-
-    def __reanimate__(self):
-        pass
-
-    def __restart__(self):
-        view_port = self.children[0]
-
-        if view_port.width < self.width:
+    def _start_animation(self):
+        self._unschedule_animation()
+        if self._view_port.width < self.width:
             return
+        self._isLoading = True
+        self._animate(True)
 
-        self.__loading__ = True
-        loop_time_frame = view_port.width * 35 / 800
-        self.__loader__ = Animation(right=view_port.x, d=loop_time_frame)
-        self.__loader__.bind(on_complete=self.__complete__)
-        self.__loader__.start(view_port)
+    def _cancel_animation(self):
+        if self._isLoading and self._animation_loader:
+            self._animation_loader.cancel(self._view_port)
+            self._reset_all_props()
+            self._view_port.x = 0
 
-    def __complete__(self, _, obj):
-        obj.x = self.width
-        self.__loader__ = None
-
-        loop_time_frame = (self.size[0] * 35 / 800)
-        self.__loader__ = Animation(x=0, d=loop_time_frame)
-        self.__loader__.bind(on_complete=self.__reset__)
-        self.__loader__.start(obj)
-
-    def __animate__(self, state=None):
+    class ScrollableLabel(Label):
         pass
 
-    def __reset__(self, *_):
-        self.__loading__ = self.__loader__ = None
+    def __init__(self, **kwargs):
+        super(ScrollableLabelComponent, self).__init__(**kwargs)
+        self._view_port = self.ScrollableLabel(
+            text=self.text, color=self.color, disabled_color=self.color
+        )
+        self._view_port.bind(texture_size=self._on_texture_update)
+        self.add_widget(self._view_port)
 
-    def on_hover(self):
-        if self.__loading__ is None:
-            self.__restart__()
+    def _schedule_animation(self):
+        self._animation_scheduler = Clock.schedule_once(
+            lambda *_: self._start_animation(), self.restart_time
+        )
 
-    def __cancel__(self):
-        if self.__loading__ and self.__loader__:
-            child = self.children[0]
-            self.__loader__.cancel(child)
-            self.__reset__()
-            child.x = 0
+    def _unschedule_animation(self):
+        if self._animation_scheduler:
+            self._animation_scheduler.cancel()
+        self._animation_scheduler = None
 
     def _on_texture_update(self, *_):
-        pass
+        self._cancel_animation()
+        self._unschedule_animation()
+        self._start_animation()
+
+    def _animate(self, direction=None):
+        if direction:
+            self._animation_loader = Animation(right=self._view_port.x, d=self._loopTime())
+            self._animation_loader.bind(on_complete=self._animation_cycle_complete)
+        else:
+            self._animation_loader = Animation(x=0, d=self._loopTime(None))
+            self._animation_loader.bind(on_complete=self._reset_all_props)
+        self._animation_loader.start(self._view_port)
+
+    def _reset_all_props(self, *largs):
+        self._isLoading = self._animation_loader = None
+        if largs and self.restart_time:
+            self._schedule_animation()
+
+    def _animation_cycle_complete(self, *largs):
+        largs[1].x = self.width
+        self._animation_loader = None
+        self._animate()

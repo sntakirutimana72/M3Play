@@ -1,7 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="94817b2e-3ace-413a-92f9-7e2bdca9dd9e" name="Default Changelist" comment="" />
+    <list default="true" id="94817b2e-3ace-413a-92f9-7e2bdca9dd9e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/nuru.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/nuru.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/syai3Play.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/syai3Play.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protocols/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/protocols/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protocols/resize.py" beforeDir="false" afterPath="$PROJECT_DIR$/protocols/resize.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protocols/startup.py" beforeDir="false" afterPath="$PROJECT_DIR$/protocols/startup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/setting.ini" beforeDir="false" afterPath="$PROJECT_DIR$/settings.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uix/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/uix/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uix/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/uix/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uix/components/bars/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/uix/components/bars/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uix/components/bars/interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/uix/components/bars/interface.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uix/components/behaviors/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/uix/components/behaviors/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uix/components/behaviors/events.py" beforeDir="false" afterPath="$PROJECT_DIR$/uix/components/behaviors/events.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uix/components/behaviors/imagery.py" beforeDir="false" afterPath="$PROJECT_DIR$/uix/components/behaviors/imagery.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uix/components/buttons/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/uix/components/buttons/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uix/components/buttons/controls.py" beforeDir="false" afterPath="$PROJECT_DIR$/uix/components/buttons/controls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uix/components/buttons/head_bars.py" beforeDir="false" afterPath="$PROJECT_DIR$/uix/components/buttons/head_bars.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uix/components/buttons/interfaces.py" beforeDir="false" afterPath="$PROJECT_DIR$/uix/components/buttons/interfaces.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uix/components/buttons/playlists.py" beforeDir="false" afterPath="$PROJECT_DIR$/uix/components/buttons/playlists.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uix/components/headers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/uix/components/headers/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uix/components/headers/headers.kv" beforeDir="false" afterPath="$PROJECT_DIR$/uix/components/headers/headers.kv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uix/components/headers/headers.py" beforeDir="false" afterPath="$PROJECT_DIR$/uix/components/headers/headers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uix/components/layers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/uix/components/layers/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uix/components/layers/layers.kv" beforeDir="false" afterPath="$PROJECT_DIR$/uix/components/layers/layers.kv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uix/components/layers/layers.py" beforeDir="false" afterPath="$PROJECT_DIR$/uix/components/layers/layers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uix/components/loading/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/uix/components/loading/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uix/components/loading/loading.py" beforeDir="false" afterPath="$PROJECT_DIR$/uix/components/loading/loading.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uix/views/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/uix/views/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uix/views/controls/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/uix/views/controls/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uix/views/controls/controls.kv" beforeDir="false" afterPath="$PROJECT_DIR$/uix/views/controls/controls.kv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uix/views/controls/controls.py" beforeDir="false" afterPath="$PROJECT_DIR$/uix/views/controls/controls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uix/views/m3Play.py" beforeDir="false" afterPath="$PROJECT_DIR$/uix/views/m3Play.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uix/views/playlist/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/uix/views/playlist/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uix/views/playlist/playlist.kv" beforeDir="false" afterPath="$PROJECT_DIR$/uix/views/playlist/playlist.kv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uix/views/playlist/playlist.py" beforeDir="false" afterPath="$PROJECT_DIR$/uix/views/playlist/playlist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/cfg.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/cfg.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/envs.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/envs.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/helpers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/helpers/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/helpers/formatters.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/helpers/formatters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/helpers/read_cli_argv.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/helpers/read_cli_argv.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/helpers/validators.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/helpers/validators.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/loggers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/loggers/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/loggers/elogger.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/loggers/elogger.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/loggers/ilogger.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/loggers/ilogger.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/workers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/workers/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/workers/operator.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/workers/operator.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +74,7 @@
   <component name="ProjectId" id="1crpVG1qmgCOMX6LbGgdLJSLY9X" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -131,42 +186,42 @@
       <screen x="53" y="24" width="1227" height="776" />
     </state>
     <state x="453" y="157" key="FileChooserDialogImpl/53.24.1227.776@53.24.1227.776" timestamp="1591568338769" />
-    <state width="1346" height="136" key="GridCell.Tab.0.bottom" timestamp="1591624641197">
+    <state width="1183" height="213" key="GridCell.Tab.0.bottom" timestamp="1591732366569">
+      <screen x="53" y="24" width="1227" height="776" />
+    </state>
+    <state width="1346" height="223" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1591625488480" />
+    <state width="1183" height="213" key="GridCell.Tab.0.bottom/53.24.1227.776@53.24.1227.776" timestamp="1591732366569" />
+    <state width="1183" height="213" key="GridCell.Tab.0.center" timestamp="1591732366568">
+      <screen x="53" y="24" width="1227" height="776" />
+    </state>
+    <state width="1346" height="223" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1591625488480" />
+    <state width="1183" height="213" key="GridCell.Tab.0.center/53.24.1227.776@53.24.1227.776" timestamp="1591732366568" />
+    <state width="1183" height="213" key="GridCell.Tab.0.left" timestamp="1591732366568">
+      <screen x="53" y="24" width="1227" height="776" />
+    </state>
+    <state width="1346" height="223" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1591625488480" />
+    <state width="1183" height="213" key="GridCell.Tab.0.left/53.24.1227.776@53.24.1227.776" timestamp="1591732366568" />
+    <state width="1183" height="213" key="GridCell.Tab.0.right" timestamp="1591732366569">
+      <screen x="53" y="24" width="1227" height="776" />
+    </state>
+    <state width="1346" height="223" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1591625488480" />
+    <state width="1183" height="213" key="GridCell.Tab.0.right/53.24.1227.776@53.24.1227.776" timestamp="1591732366569" />
+    <state width="1346" height="223" key="GridCell.Tab.1.bottom" timestamp="1591625488480">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1346" height="136" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1591624641197" />
-    <state width="1183" height="213" key="GridCell.Tab.0.bottom/53.24.1227.776@53.24.1227.776" timestamp="1591568176676" />
-    <state width="1346" height="136" key="GridCell.Tab.0.center" timestamp="1591624641197">
+    <state width="1346" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1591625488480" />
+    <state width="1346" height="223" key="GridCell.Tab.1.center" timestamp="1591625488480">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1346" height="136" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1591624641197" />
-    <state width="1183" height="213" key="GridCell.Tab.0.center/53.24.1227.776@53.24.1227.776" timestamp="1591568176675" />
-    <state width="1346" height="136" key="GridCell.Tab.0.left" timestamp="1591624641197">
+    <state width="1346" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1591625488480" />
+    <state width="1346" height="223" key="GridCell.Tab.1.left" timestamp="1591625488480">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1346" height="136" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1591624641197" />
-    <state width="1183" height="213" key="GridCell.Tab.0.left/53.24.1227.776@53.24.1227.776" timestamp="1591568176674" />
-    <state width="1346" height="136" key="GridCell.Tab.0.right" timestamp="1591624641197">
+    <state width="1346" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1591625488480" />
+    <state width="1346" height="223" key="GridCell.Tab.1.right" timestamp="1591625488480">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1346" height="136" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1591624641197" />
-    <state width="1183" height="213" key="GridCell.Tab.0.right/53.24.1227.776@53.24.1227.776" timestamp="1591568176675" />
-    <state width="1346" height="223" key="GridCell.Tab.1.bottom" timestamp="1591610787817">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1346" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1591610787817" />
-    <state width="1346" height="223" key="GridCell.Tab.1.center" timestamp="1591610787817">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1346" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1591610787817" />
-    <state width="1346" height="223" key="GridCell.Tab.1.left" timestamp="1591610787817">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1346" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1591610787817" />
-    <state width="1346" height="223" key="GridCell.Tab.1.right" timestamp="1591610787817">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1346" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1591610787817" />
+    <state width="1346" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1591625488480" />
     <state x="169" y="9" key="SettingsEditor" timestamp="1591603940898">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

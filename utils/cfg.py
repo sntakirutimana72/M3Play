@@ -8,7 +8,7 @@ from configparser import ConfigParser
 def cfg_getter(section, option=None):
     try:
         cfg = ConfigParser()
-        cfg.read(Path(exec_dir()) / 'setting.ini')
+        cfg.read(Path(exec_dir()) / 'settings.ini')
         return cfg.get(section, option) if option else cfg.items(section)
     except:
         pass
