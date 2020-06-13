@@ -1,1 +1,1 @@
-# M3Play
+# An audio player designed in python to read most audio files

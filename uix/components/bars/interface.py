@@ -85,15 +85,18 @@ class ProgressBarComponent(BLayout, ImageSourcePath):
         sizer = touch_x - self.x
         self._compute_sizer_and_ratio(sizer=sizer)
 
-    def calculate_from_ratio(self, ratio):
+    def calculate_from_ratio(self, ratio, custom=None):
         sizer = self.size[0] * ratio
-        self._compute_sizer_and_ratio(sizer=sizer)
+        self._compute_sizer_and_ratio(sizer, custom)
 
-    def _compute_sizer_and_ratio(self, sizer):
+    def _compute_sizer_and_ratio(self, sizer, custom=None):
         if sizer <= 0:
             sizer = 10e-24
         elif sizer > self.width:
             sizer = self.width
 
         self.sizer = sizer
+        current_value_ration = self.value_ratio
         self.value_ratio = self._compute_ratio(sizer)
+        if custom and current_value_ration != self.value_ratio:
+            self.dispatch('on_seek', self.value_ratio)

@@ -1,0 +1,436 @@
+2020-06-11 21:36:55,994 :: INFO :: SYAI-M3Play :: 'SYAI-M3Play started..'
+2020-06-11 21:36:56,042 :: INFO :: kivy :: Kivy: v1.11.1
+2020-06-11 21:36:56,042 :: INFO :: kivy :: Kivy: Installed at "/usr/local/lib/python3.6/site-packages/kivy/__init__.py"
+2020-06-11 21:36:56,042 :: INFO :: kivy :: Python: v3.6.9 (default, Oct 27 2019, 00:29:13) 
+[GCC 5.4.0 20160609]
+2020-06-11 21:36:56,042 :: INFO :: kivy :: Python: Interpreter at "/home/nuru/Envs/syai3Play/bin/python"
+2020-06-11 21:36:56,223 :: INFO :: kivy :: Factory: 184 symbols loaded
+2020-06-11 21:36:56,392 :: INFO :: kivy :: Image: Providers: img_tex, img_dds, img_pil, img_gif (img_sdl2, img_ffpyplayer ignored)
+2020-06-11 21:36:56,475 :: INFO :: kivy :: Window: Provider: sdl2(['window_egl_rpi'] ignored)
+2020-06-11 21:36:57,675 :: INFO :: kivy :: GL: Using the "OpenGL" graphics system
+2020-06-11 21:36:57,677 :: INFO :: kivy :: GL: Backend used <sdl2>
+2020-06-11 21:36:57,677 :: INFO :: kivy :: GL: OpenGL version <b'2.1 Mesa 18.0.5'>
+2020-06-11 21:36:57,678 :: INFO :: kivy :: GL: OpenGL vendor <b'Intel Open Source Technology Center'>
+2020-06-11 21:36:57,678 :: INFO :: kivy :: GL: OpenGL renderer <b'Mesa DRI Mobile Intel\xc2\xae GM45 Express Chipset '>
+2020-06-11 21:36:57,678 :: INFO :: kivy :: GL: OpenGL parsed version: 2, 1
+2020-06-11 21:36:57,678 :: INFO :: kivy :: GL: Shading version <b'1.20'>
+2020-06-11 21:36:57,678 :: INFO :: kivy :: GL: Texture max size <8192>
+2020-06-11 21:36:57,679 :: INFO :: kivy :: GL: Texture max units <16>
+2020-06-11 21:36:57,791 :: INFO :: kivy :: Window: auto add sdl2 input provider
+2020-06-11 21:36:57,792 :: INFO :: kivy :: Window: virtual keyboard not allowed, single mode, not docked
+2020-06-11 21:36:57,805 :: INFO :: kivy :: Text: Provider: sdl2
+2020-06-11 21:36:57,874 :: INFO :: kivy :: AudioGstplayer: Using Gstreamer 1.8.3.0
+2020-06-11 21:36:57,883 :: INFO :: kivy :: Audio: Providers: audio_gstplayer, audio_sdl2 (audio_ffpyplayer ignored)
+2020-06-11 21:36:57,966 :: INFO :: kivy :: Loader: using a thread pool of 2 workers
+2020-06-11 21:36:58,181 :: INFO :: kivy :: Base: Start application main loop
+2020-06-11 21:36:58,188 :: INFO :: kivy :: GL: NPOT texture support is available
+2020-06-11 22:06:39,883 :: WARNING :: kivy :: Deprecated property "<AliasProperty name=filename>" of object "<kivy.core.audio.audio_gstplayer.SoundGstplayer object at 0x7f363e6a5b40>" was accessed, it will be removed in a future version
+2020-06-11 22:07:03,469 :: INFO :: kivy :: Base: Leaving application in progress...
+2020-06-11 22:07:03,478 :: INFO :: kivy :: WindowSDL: exiting mainloop and closing.
+2020-06-11 22:07:03,570 :: INFO :: SYAI-M3Play :: 'SYAI-M3Play terminated..'
+2020-06-13 16:29:46,936 :: INFO :: SYAI-M3Play :: 'SYAI-M3Play started..'
+2020-06-13 16:29:47,296 :: INFO :: kivy :: Kivy: v1.11.1
+2020-06-13 16:29:47,296 :: INFO :: kivy :: Kivy: Installed at "/usr/local/lib/python3.6/site-packages/kivy/__init__.py"
+2020-06-13 16:29:47,296 :: INFO :: kivy :: Python: v3.6.9 (default, Oct 27 2019, 00:29:13) 
+[GCC 5.4.0 20160609]
+2020-06-13 16:29:47,296 :: INFO :: kivy :: Python: Interpreter at "/home/nuru/Envs/syai3Play/bin/python"
+2020-06-13 16:29:48,566 :: INFO :: kivy :: Factory: 184 symbols loaded
+2020-06-13 16:29:49,543 :: INFO :: kivy :: Image: Providers: img_tex, img_dds, img_pil, img_gif (img_sdl2, img_ffpyplayer ignored)
+2020-06-13 16:29:50,311 :: INFO :: kivy :: Window: Provider: sdl2(['window_egl_rpi'] ignored)
+2020-06-13 16:29:51,999 :: INFO :: kivy :: GL: Using the "OpenGL" graphics system
+2020-06-13 16:29:52,000 :: INFO :: kivy :: GL: Backend used <sdl2>
+2020-06-13 16:29:52,000 :: INFO :: kivy :: GL: OpenGL version <b'2.1 Mesa 18.0.5'>
+2020-06-13 16:29:52,000 :: INFO :: kivy :: GL: OpenGL vendor <b'Intel Open Source Technology Center'>
+2020-06-13 16:29:52,001 :: INFO :: kivy :: GL: OpenGL renderer <b'Mesa DRI Mobile Intel\xc2\xae GM45 Express Chipset '>
+2020-06-13 16:29:52,001 :: INFO :: kivy :: GL: OpenGL parsed version: 2, 1
+2020-06-13 16:29:52,001 :: INFO :: kivy :: GL: Shading version <b'1.20'>
+2020-06-13 16:29:52,001 :: INFO :: kivy :: GL: Texture max size <8192>
+2020-06-13 16:29:52,098 :: INFO :: kivy :: GL: Texture max units <16>
+2020-06-13 16:29:52,453 :: INFO :: kivy :: Window: auto add sdl2 input provider
+2020-06-13 16:29:52,482 :: INFO :: kivy :: Window: virtual keyboard not allowed, single mode, not docked
+2020-06-13 16:29:52,597 :: INFO :: kivy :: Text: Provider: sdl2
+2020-06-13 16:29:53,101 :: INFO :: kivy :: AudioGstplayer: Using Gstreamer 1.8.3.0
+2020-06-13 16:29:53,669 :: INFO :: kivy :: Audio: Providers: audio_gstplayer, audio_sdl2 (audio_ffpyplayer ignored)
+2020-06-13 16:29:54,164 :: INFO :: kivy :: Loader: using a thread pool of 2 workers
+2020-06-13 16:29:54,458 :: INFO :: kivy :: Base: Start application main loop
+2020-06-13 16:29:54,500 :: INFO :: kivy :: GL: NPOT texture support is available
+2020-06-13 16:29:57,309 :: INFO :: kivy :: Base: Leaving application in progress...
+2020-06-13 16:29:57,311 :: INFO :: kivy :: WindowSDL: exiting mainloop and closing.
+2020-06-13 16:29:57,401 :: INFO :: SYAI-M3Play :: 'SYAI-M3Play terminated..'
+2020-06-13 16:31:04,695 :: INFO :: SYAI-M3Play :: 'SYAI-M3Play started..'
+2020-06-13 16:31:04,778 :: INFO :: kivy :: Kivy: v1.11.1
+2020-06-13 16:31:04,778 :: INFO :: kivy :: Kivy: Installed at "/usr/local/lib/python3.6/site-packages/kivy/__init__.py"
+2020-06-13 16:31:04,778 :: INFO :: kivy :: Python: v3.6.9 (default, Oct 27 2019, 00:29:13) 
+[GCC 5.4.0 20160609]
+2020-06-13 16:31:04,779 :: INFO :: kivy :: Python: Interpreter at "/home/nuru/Envs/syai3Play/bin/python"
+2020-06-13 16:31:05,111 :: INFO :: kivy :: Factory: 184 symbols loaded
+2020-06-13 16:31:05,313 :: INFO :: kivy :: Image: Providers: img_tex, img_dds, img_pil, img_gif (img_sdl2, img_ffpyplayer ignored)
+2020-06-13 16:31:05,466 :: INFO :: kivy :: Window: Provider: sdl2(['window_egl_rpi'] ignored)
+2020-06-13 16:31:06,660 :: INFO :: kivy :: GL: Using the "OpenGL" graphics system
+2020-06-13 16:31:06,666 :: INFO :: kivy :: GL: Backend used <sdl2>
+2020-06-13 16:31:06,675 :: INFO :: kivy :: GL: OpenGL version <b'2.1 Mesa 18.0.5'>
+2020-06-13 16:31:06,676 :: INFO :: kivy :: GL: OpenGL vendor <b'Intel Open Source Technology Center'>
+2020-06-13 16:31:06,676 :: INFO :: kivy :: GL: OpenGL renderer <b'Mesa DRI Mobile Intel\xc2\xae GM45 Express Chipset '>
+2020-06-13 16:31:06,676 :: INFO :: kivy :: GL: OpenGL parsed version: 2, 1
+2020-06-13 16:31:06,676 :: INFO :: kivy :: GL: Shading version <b'1.20'>
+2020-06-13 16:31:06,677 :: INFO :: kivy :: GL: Texture max size <8192>
+2020-06-13 16:31:06,677 :: INFO :: kivy :: GL: Texture max units <16>
+2020-06-13 16:31:06,789 :: INFO :: kivy :: Window: auto add sdl2 input provider
+2020-06-13 16:31:06,791 :: INFO :: kivy :: Window: virtual keyboard not allowed, single mode, not docked
+2020-06-13 16:31:06,801 :: INFO :: kivy :: Text: Provider: sdl2
+2020-06-13 16:31:06,855 :: INFO :: kivy :: AudioGstplayer: Using Gstreamer 1.8.3.0
+2020-06-13 16:31:06,865 :: INFO :: kivy :: Audio: Providers: audio_gstplayer, audio_sdl2 (audio_ffpyplayer ignored)
+2020-06-13 16:31:06,999 :: INFO :: kivy :: Loader: using a thread pool of 2 workers
+2020-06-13 16:31:07,237 :: INFO :: kivy :: Base: Start application main loop
+2020-06-13 16:31:07,277 :: INFO :: kivy :: GL: NPOT texture support is available
+2020-06-13 16:31:09,204 :: INFO :: kivy :: Base: Leaving application in progress...
+2020-06-13 16:31:09,228 :: INFO :: kivy :: WindowSDL: exiting mainloop and closing.
+2020-06-13 16:31:09,308 :: INFO :: SYAI-M3Play :: 'SYAI-M3Play terminated..'
+2020-06-13 16:31:24,997 :: INFO :: SYAI-M3Play :: 'SYAI-M3Play started..'
+2020-06-13 16:31:25,338 :: INFO :: kivy :: Kivy: v1.11.1
+2020-06-13 16:31:25,339 :: INFO :: kivy :: Kivy: Installed at "/usr/local/lib/python3.6/site-packages/kivy/__init__.py"
+2020-06-13 16:31:25,339 :: INFO :: kivy :: Python: v3.6.9 (default, Oct 27 2019, 00:29:13) 
+[GCC 5.4.0 20160609]
+2020-06-13 16:31:25,339 :: INFO :: kivy :: Python: Interpreter at "/home/nuru/Envs/syai3Play/bin/python"
+2020-06-13 16:31:25,950 :: INFO :: kivy :: Factory: 184 symbols loaded
+2020-06-13 16:31:26,952 :: INFO :: kivy :: Image: Providers: img_tex, img_dds, img_pil, img_gif (img_sdl2, img_ffpyplayer ignored)
+2020-06-13 16:31:27,804 :: INFO :: kivy :: Window: Provider: sdl2(['window_egl_rpi'] ignored)
+2020-06-13 16:31:29,051 :: INFO :: kivy :: GL: Using the "OpenGL" graphics system
+2020-06-13 16:31:29,055 :: INFO :: kivy :: GL: Backend used <sdl2>
+2020-06-13 16:31:29,056 :: INFO :: kivy :: GL: OpenGL version <b'2.1 Mesa 18.0.5'>
+2020-06-13 16:31:29,056 :: INFO :: kivy :: GL: OpenGL vendor <b'Intel Open Source Technology Center'>
+2020-06-13 16:31:29,057 :: INFO :: kivy :: GL: OpenGL renderer <b'Mesa DRI Mobile Intel\xc2\xae GM45 Express Chipset '>
+2020-06-13 16:31:29,060 :: INFO :: kivy :: GL: OpenGL parsed version: 2, 1
+2020-06-13 16:31:29,064 :: INFO :: kivy :: GL: Shading version <b'1.20'>
+2020-06-13 16:31:29,064 :: INFO :: kivy :: GL: Texture max size <8192>
+2020-06-13 16:31:29,064 :: INFO :: kivy :: GL: Texture max units <16>
+2020-06-13 16:31:29,358 :: INFO :: kivy :: Window: auto add sdl2 input provider
+2020-06-13 16:31:29,359 :: INFO :: kivy :: Window: virtual keyboard not allowed, single mode, not docked
+2020-06-13 16:31:29,419 :: INFO :: kivy :: Text: Provider: sdl2
+2020-06-13 16:31:29,521 :: INFO :: kivy :: AudioGstplayer: Using Gstreamer 1.8.3.0
+2020-06-13 16:31:29,645 :: INFO :: kivy :: Audio: Providers: audio_gstplayer, audio_sdl2 (audio_ffpyplayer ignored)
+2020-06-13 16:31:29,729 :: INFO :: kivy :: Loader: using a thread pool of 2 workers
+2020-06-13 16:31:29,964 :: INFO :: kivy :: Base: Start application main loop
+2020-06-13 16:31:29,971 :: INFO :: kivy :: GL: NPOT texture support is available
+2020-06-13 16:31:42,015 :: INFO :: kivy :: Base: Leaving application in progress...
+2020-06-13 16:31:42,016 :: INFO :: kivy :: WindowSDL: exiting mainloop and closing.
+2020-06-13 16:31:42,181 :: INFO :: SYAI-M3Play :: 'SYAI-M3Play terminated..'
+2020-06-13 16:32:06,893 :: INFO :: SYAI-M3Play :: 'SYAI-M3Play started..'
+2020-06-13 16:32:06,949 :: INFO :: kivy :: Kivy: v1.11.1
+2020-06-13 16:32:06,949 :: INFO :: kivy :: Kivy: Installed at "/usr/local/lib/python3.6/site-packages/kivy/__init__.py"
+2020-06-13 16:32:06,949 :: INFO :: kivy :: Python: v3.6.9 (default, Oct 27 2019, 00:29:13) 
+[GCC 5.4.0 20160609]
+2020-06-13 16:32:06,950 :: INFO :: kivy :: Python: Interpreter at "/home/nuru/Envs/syai3Play/bin/python"
+2020-06-13 16:32:07,293 :: INFO :: kivy :: Factory: 184 symbols loaded
+2020-06-13 16:32:07,490 :: INFO :: kivy :: Image: Providers: img_tex, img_dds, img_pil, img_gif (img_sdl2, img_ffpyplayer ignored)
+2020-06-13 16:32:07,577 :: INFO :: kivy :: Window: Provider: sdl2(['window_egl_rpi'] ignored)
+2020-06-13 16:32:08,716 :: INFO :: kivy :: GL: Using the "OpenGL" graphics system
+2020-06-13 16:32:08,718 :: INFO :: kivy :: GL: Backend used <sdl2>
+2020-06-13 16:32:08,719 :: INFO :: kivy :: GL: OpenGL version <b'2.1 Mesa 18.0.5'>
+2020-06-13 16:32:08,719 :: INFO :: kivy :: GL: OpenGL vendor <b'Intel Open Source Technology Center'>
+2020-06-13 16:32:08,719 :: INFO :: kivy :: GL: OpenGL renderer <b'Mesa DRI Mobile Intel\xc2\xae GM45 Express Chipset '>
+2020-06-13 16:32:08,719 :: INFO :: kivy :: GL: OpenGL parsed version: 2, 1
+2020-06-13 16:32:08,720 :: INFO :: kivy :: GL: Shading version <b'1.20'>
+2020-06-13 16:32:08,720 :: INFO :: kivy :: GL: Texture max size <8192>
+2020-06-13 16:32:08,720 :: INFO :: kivy :: GL: Texture max units <16>
+2020-06-13 16:32:08,848 :: INFO :: kivy :: Window: auto add sdl2 input provider
+2020-06-13 16:32:08,849 :: INFO :: kivy :: Window: virtual keyboard not allowed, single mode, not docked
+2020-06-13 16:32:08,860 :: INFO :: kivy :: Text: Provider: sdl2
+2020-06-13 16:32:08,915 :: INFO :: kivy :: AudioGstplayer: Using Gstreamer 1.8.3.0
+2020-06-13 16:32:08,924 :: INFO :: kivy :: Audio: Providers: audio_gstplayer, audio_sdl2 (audio_ffpyplayer ignored)
+2020-06-13 16:32:09,004 :: INFO :: kivy :: Loader: using a thread pool of 2 workers
+2020-06-13 16:32:09,366 :: INFO :: kivy :: Base: Start application main loop
+2020-06-13 16:32:09,372 :: INFO :: kivy :: GL: NPOT texture support is available
+2020-06-13 16:32:17,570 :: INFO :: kivy :: Base: Leaving application in progress...
+2020-06-13 16:32:17,574 :: INFO :: kivy :: WindowSDL: exiting mainloop and closing.
+2020-06-13 16:32:17,682 :: INFO :: SYAI-M3Play :: 'SYAI-M3Play terminated..'
+2020-06-13 16:32:24,225 :: INFO :: SYAI-M3Play :: 'SYAI-M3Play started..'
+2020-06-13 16:32:24,325 :: INFO :: kivy :: Kivy: v1.11.1
+2020-06-13 16:32:24,325 :: INFO :: kivy :: Kivy: Installed at "/usr/local/lib/python3.6/site-packages/kivy/__init__.py"
+2020-06-13 16:32:24,325 :: INFO :: kivy :: Python: v3.6.9 (default, Oct 27 2019, 00:29:13) 
+[GCC 5.4.0 20160609]
+2020-06-13 16:32:24,325 :: INFO :: kivy :: Python: Interpreter at "/home/nuru/Envs/syai3Play/bin/python"
+2020-06-13 16:32:24,537 :: INFO :: kivy :: Factory: 184 symbols loaded
+2020-06-13 16:32:24,759 :: INFO :: kivy :: Image: Providers: img_tex, img_dds, img_pil, img_gif (img_sdl2, img_ffpyplayer ignored)
+2020-06-13 16:32:24,844 :: INFO :: kivy :: Window: Provider: sdl2(['window_egl_rpi'] ignored)
+2020-06-13 16:32:25,999 :: INFO :: kivy :: GL: Using the "OpenGL" graphics system
+2020-06-13 16:32:26,000 :: INFO :: kivy :: GL: Backend used <sdl2>
+2020-06-13 16:32:26,000 :: INFO :: kivy :: GL: OpenGL version <b'2.1 Mesa 18.0.5'>
+2020-06-13 16:32:26,001 :: INFO :: kivy :: GL: OpenGL vendor <b'Intel Open Source Technology Center'>
+2020-06-13 16:32:26,001 :: INFO :: kivy :: GL: OpenGL renderer <b'Mesa DRI Mobile Intel\xc2\xae GM45 Express Chipset '>
+2020-06-13 16:32:26,001 :: INFO :: kivy :: GL: OpenGL parsed version: 2, 1
+2020-06-13 16:32:26,001 :: INFO :: kivy :: GL: Shading version <b'1.20'>
+2020-06-13 16:32:26,001 :: INFO :: kivy :: GL: Texture max size <8192>
+2020-06-13 16:32:26,002 :: INFO :: kivy :: GL: Texture max units <16>
+2020-06-13 16:32:26,122 :: INFO :: kivy :: Window: auto add sdl2 input provider
+2020-06-13 16:32:26,122 :: INFO :: kivy :: Window: virtual keyboard not allowed, single mode, not docked
+2020-06-13 16:32:26,138 :: INFO :: kivy :: Text: Provider: sdl2
+2020-06-13 16:32:26,205 :: INFO :: kivy :: AudioGstplayer: Using Gstreamer 1.8.3.0
+2020-06-13 16:32:26,214 :: INFO :: kivy :: Audio: Providers: audio_gstplayer, audio_sdl2 (audio_ffpyplayer ignored)
+2020-06-13 16:32:26,302 :: INFO :: kivy :: Loader: using a thread pool of 2 workers
+2020-06-13 16:32:26,637 :: INFO :: kivy :: Base: Start application main loop
+2020-06-13 16:32:26,644 :: INFO :: kivy :: GL: NPOT texture support is available
+2020-06-13 16:32:33,387 :: INFO :: kivy :: Base: Leaving application in progress...
+2020-06-13 16:32:33,389 :: INFO :: kivy :: WindowSDL: exiting mainloop and closing.
+2020-06-13 16:32:33,555 :: INFO :: SYAI-M3Play :: 'SYAI-M3Play terminated..'
+2020-06-13 16:32:37,509 :: INFO :: SYAI-M3Play :: 'SYAI-M3Play started..'
+2020-06-13 16:32:37,564 :: INFO :: kivy :: Kivy: v1.11.1
+2020-06-13 16:32:37,565 :: INFO :: kivy :: Kivy: Installed at "/usr/local/lib/python3.6/site-packages/kivy/__init__.py"
+2020-06-13 16:32:37,565 :: INFO :: kivy :: Python: v3.6.9 (default, Oct 27 2019, 00:29:13) 
+[GCC 5.4.0 20160609]
+2020-06-13 16:32:37,565 :: INFO :: kivy :: Python: Interpreter at "/home/nuru/Envs/syai3Play/bin/python"
+2020-06-13 16:32:37,836 :: INFO :: kivy :: Factory: 184 symbols loaded
+2020-06-13 16:32:38,033 :: INFO :: kivy :: Image: Providers: img_tex, img_dds, img_pil, img_gif (img_sdl2, img_ffpyplayer ignored)
+2020-06-13 16:32:38,141 :: INFO :: kivy :: Window: Provider: sdl2(['window_egl_rpi'] ignored)
+2020-06-13 16:32:39,314 :: INFO :: kivy :: GL: Using the "OpenGL" graphics system
+2020-06-13 16:32:39,316 :: INFO :: kivy :: GL: Backend used <sdl2>
+2020-06-13 16:32:39,317 :: INFO :: kivy :: GL: OpenGL version <b'2.1 Mesa 18.0.5'>
+2020-06-13 16:32:39,317 :: INFO :: kivy :: GL: OpenGL vendor <b'Intel Open Source Technology Center'>
+2020-06-13 16:32:39,317 :: INFO :: kivy :: GL: OpenGL renderer <b'Mesa DRI Mobile Intel\xc2\xae GM45 Express Chipset '>
+2020-06-13 16:32:39,317 :: INFO :: kivy :: GL: OpenGL parsed version: 2, 1
+2020-06-13 16:32:39,317 :: INFO :: kivy :: GL: Shading version <b'1.20'>
+2020-06-13 16:32:39,317 :: INFO :: kivy :: GL: Texture max size <8192>
+2020-06-13 16:32:39,317 :: INFO :: kivy :: GL: Texture max units <16>
+2020-06-13 16:32:39,434 :: INFO :: kivy :: Window: auto add sdl2 input provider
+2020-06-13 16:32:39,435 :: INFO :: kivy :: Window: virtual keyboard not allowed, single mode, not docked
+2020-06-13 16:32:39,446 :: INFO :: kivy :: Text: Provider: sdl2
+2020-06-13 16:32:39,501 :: INFO :: kivy :: AudioGstplayer: Using Gstreamer 1.8.3.0
+2020-06-13 16:32:39,511 :: INFO :: kivy :: Audio: Providers: audio_gstplayer, audio_sdl2 (audio_ffpyplayer ignored)
+2020-06-13 16:32:39,590 :: INFO :: kivy :: Loader: using a thread pool of 2 workers
+2020-06-13 16:32:40,016 :: INFO :: kivy :: Base: Start application main loop
+2020-06-13 16:32:40,025 :: INFO :: kivy :: GL: NPOT texture support is available
+2020-06-13 16:32:44,083 :: INFO :: kivy :: Base: Leaving application in progress...
+2020-06-13 16:32:44,085 :: INFO :: kivy :: WindowSDL: exiting mainloop and closing.
+2020-06-13 16:32:44,235 :: INFO :: SYAI-M3Play :: 'SYAI-M3Play terminated..'
+2020-06-13 16:32:54,464 :: INFO :: SYAI-M3Play :: 'SYAI-M3Play started..'
+2020-06-13 16:32:54,536 :: INFO :: kivy :: Kivy: v1.11.1
+2020-06-13 16:32:54,537 :: INFO :: kivy :: Kivy: Installed at "/usr/local/lib/python3.6/site-packages/kivy/__init__.py"
+2020-06-13 16:32:54,537 :: INFO :: kivy :: Python: v3.6.9 (default, Oct 27 2019, 00:29:13) 
+[GCC 5.4.0 20160609]
+2020-06-13 16:32:54,537 :: INFO :: kivy :: Python: Interpreter at "/home/nuru/Envs/syai3Play/bin/python"
+2020-06-13 16:32:54,863 :: INFO :: kivy :: Factory: 184 symbols loaded
+2020-06-13 16:32:55,087 :: INFO :: kivy :: Image: Providers: img_tex, img_dds, img_pil, img_gif (img_sdl2, img_ffpyplayer ignored)
+2020-06-13 16:32:55,177 :: INFO :: kivy :: Window: Provider: sdl2(['window_egl_rpi'] ignored)
+2020-06-13 16:32:56,355 :: INFO :: kivy :: GL: Using the "OpenGL" graphics system
+2020-06-13 16:32:56,355 :: INFO :: kivy :: GL: Backend used <sdl2>
+2020-06-13 16:32:56,356 :: INFO :: kivy :: GL: OpenGL version <b'2.1 Mesa 18.0.5'>
+2020-06-13 16:32:56,356 :: INFO :: kivy :: GL: OpenGL vendor <b'Intel Open Source Technology Center'>
+2020-06-13 16:32:56,356 :: INFO :: kivy :: GL: OpenGL renderer <b'Mesa DRI Mobile Intel\xc2\xae GM45 Express Chipset '>
+2020-06-13 16:32:56,356 :: INFO :: kivy :: GL: OpenGL parsed version: 2, 1
+2020-06-13 16:32:56,357 :: INFO :: kivy :: GL: Shading version <b'1.20'>
+2020-06-13 16:32:56,357 :: INFO :: kivy :: GL: Texture max size <8192>
+2020-06-13 16:32:56,357 :: INFO :: kivy :: GL: Texture max units <16>
+2020-06-13 16:32:56,469 :: INFO :: kivy :: Window: auto add sdl2 input provider
+2020-06-13 16:32:56,470 :: INFO :: kivy :: Window: virtual keyboard not allowed, single mode, not docked
+2020-06-13 16:32:56,485 :: INFO :: kivy :: Text: Provider: sdl2
+2020-06-13 16:32:56,552 :: INFO :: kivy :: AudioGstplayer: Using Gstreamer 1.8.3.0
+2020-06-13 16:32:56,561 :: INFO :: kivy :: Audio: Providers: audio_gstplayer, audio_sdl2 (audio_ffpyplayer ignored)
+2020-06-13 16:32:56,651 :: INFO :: kivy :: Loader: using a thread pool of 2 workers
+2020-06-13 16:32:56,952 :: INFO :: kivy :: Base: Start application main loop
+2020-06-13 16:32:56,958 :: INFO :: kivy :: GL: NPOT texture support is available
+2020-06-13 16:33:00,039 :: INFO :: kivy :: Base: Leaving application in progress...
+2020-06-13 16:33:00,042 :: INFO :: kivy :: WindowSDL: exiting mainloop and closing.
+2020-06-13 16:33:00,159 :: INFO :: SYAI-M3Play :: 'SYAI-M3Play terminated..'
+2020-06-13 16:33:05,254 :: INFO :: SYAI-M3Play :: 'SYAI-M3Play started..'
+2020-06-13 16:33:05,333 :: INFO :: kivy :: Kivy: v1.11.1
+2020-06-13 16:33:05,333 :: INFO :: kivy :: Kivy: Installed at "/usr/local/lib/python3.6/site-packages/kivy/__init__.py"
+2020-06-13 16:33:05,334 :: INFO :: kivy :: Python: v3.6.9 (default, Oct 27 2019, 00:29:13) 
+[GCC 5.4.0 20160609]
+2020-06-13 16:33:05,334 :: INFO :: kivy :: Python: Interpreter at "/home/nuru/Envs/syai3Play/bin/python"
+2020-06-13 16:33:05,599 :: INFO :: kivy :: Factory: 184 symbols loaded
+2020-06-13 16:33:05,810 :: INFO :: kivy :: Image: Providers: img_tex, img_dds, img_pil, img_gif (img_sdl2, img_ffpyplayer ignored)
+2020-06-13 16:33:05,897 :: INFO :: kivy :: Window: Provider: sdl2(['window_egl_rpi'] ignored)
+2020-06-13 16:33:07,119 :: INFO :: kivy :: GL: Using the "OpenGL" graphics system
+2020-06-13 16:33:07,123 :: INFO :: kivy :: GL: Backend used <sdl2>
+2020-06-13 16:33:07,124 :: INFO :: kivy :: GL: OpenGL version <b'2.1 Mesa 18.0.5'>
+2020-06-13 16:33:07,124 :: INFO :: kivy :: GL: OpenGL vendor <b'Intel Open Source Technology Center'>
+2020-06-13 16:33:07,124 :: INFO :: kivy :: GL: OpenGL renderer <b'Mesa DRI Mobile Intel\xc2\xae GM45 Express Chipset '>
+2020-06-13 16:33:07,124 :: INFO :: kivy :: GL: OpenGL parsed version: 2, 1
+2020-06-13 16:33:07,125 :: INFO :: kivy :: GL: Shading version <b'1.20'>
+2020-06-13 16:33:07,125 :: INFO :: kivy :: GL: Texture max size <8192>
+2020-06-13 16:33:07,125 :: INFO :: kivy :: GL: Texture max units <16>
+2020-06-13 16:33:07,223 :: INFO :: kivy :: Window: auto add sdl2 input provider
+2020-06-13 16:33:07,223 :: INFO :: kivy :: Window: virtual keyboard not allowed, single mode, not docked
+2020-06-13 16:33:07,237 :: INFO :: kivy :: Text: Provider: sdl2
+2020-06-13 16:33:07,300 :: INFO :: kivy :: AudioGstplayer: Using Gstreamer 1.8.3.0
+2020-06-13 16:33:07,309 :: INFO :: kivy :: Audio: Providers: audio_gstplayer, audio_sdl2 (audio_ffpyplayer ignored)
+2020-06-13 16:33:07,395 :: INFO :: kivy :: Loader: using a thread pool of 2 workers
+2020-06-13 16:33:07,740 :: INFO :: kivy :: Base: Start application main loop
+2020-06-13 16:33:07,746 :: INFO :: kivy :: GL: NPOT texture support is available
+2020-06-13 16:33:10,826 :: INFO :: kivy :: Base: Leaving application in progress...
+2020-06-13 16:33:10,829 :: INFO :: kivy :: WindowSDL: exiting mainloop and closing.
+2020-06-13 16:33:10,910 :: INFO :: SYAI-M3Play :: 'SYAI-M3Play terminated..'
+2020-06-13 16:33:26,658 :: INFO :: SYAI-M3Play :: 'SYAI-M3Play started..'
+2020-06-13 16:33:26,802 :: INFO :: kivy :: Kivy: v1.11.1
+2020-06-13 16:33:26,803 :: INFO :: kivy :: Kivy: Installed at "/usr/local/lib/python3.6/site-packages/kivy/__init__.py"
+2020-06-13 16:33:26,803 :: INFO :: kivy :: Python: v3.6.9 (default, Oct 27 2019, 00:29:13) 
+[GCC 5.4.0 20160609]
+2020-06-13 16:33:26,803 :: INFO :: kivy :: Python: Interpreter at "/home/nuru/Envs/syai3Play/bin/python"
+2020-06-13 16:33:27,006 :: INFO :: kivy :: Factory: 184 symbols loaded
+2020-06-13 16:33:27,185 :: INFO :: kivy :: Image: Providers: img_tex, img_dds, img_pil, img_gif (img_sdl2, img_ffpyplayer ignored)
+2020-06-13 16:33:27,278 :: INFO :: kivy :: Window: Provider: sdl2(['window_egl_rpi'] ignored)
+2020-06-13 16:33:28,455 :: INFO :: kivy :: GL: Using the "OpenGL" graphics system
+2020-06-13 16:33:28,459 :: INFO :: kivy :: GL: Backend used <sdl2>
+2020-06-13 16:33:28,460 :: INFO :: kivy :: GL: OpenGL version <b'2.1 Mesa 18.0.5'>
+2020-06-13 16:33:28,460 :: INFO :: kivy :: GL: OpenGL vendor <b'Intel Open Source Technology Center'>
+2020-06-13 16:33:28,461 :: INFO :: kivy :: GL: OpenGL renderer <b'Mesa DRI Mobile Intel\xc2\xae GM45 Express Chipset '>
+2020-06-13 16:33:28,461 :: INFO :: kivy :: GL: OpenGL parsed version: 2, 1
+2020-06-13 16:33:28,462 :: INFO :: kivy :: GL: Shading version <b'1.20'>
+2020-06-13 16:33:28,463 :: INFO :: kivy :: GL: Texture max size <8192>
+2020-06-13 16:33:28,464 :: INFO :: kivy :: GL: Texture max units <16>
+2020-06-13 16:33:28,561 :: INFO :: kivy :: Window: auto add sdl2 input provider
+2020-06-13 16:33:28,562 :: INFO :: kivy :: Window: virtual keyboard not allowed, single mode, not docked
+2020-06-13 16:33:28,574 :: INFO :: kivy :: Text: Provider: sdl2
+2020-06-13 16:33:28,638 :: INFO :: kivy :: AudioGstplayer: Using Gstreamer 1.8.3.0
+2020-06-13 16:33:28,647 :: INFO :: kivy :: Audio: Providers: audio_gstplayer, audio_sdl2 (audio_ffpyplayer ignored)
+2020-06-13 16:33:28,729 :: INFO :: kivy :: Loader: using a thread pool of 2 workers
+2020-06-13 16:33:28,997 :: INFO :: kivy :: Base: Start application main loop
+2020-06-13 16:33:29,004 :: INFO :: kivy :: GL: NPOT texture support is available
+2020-06-13 16:33:31,374 :: INFO :: kivy :: Base: Leaving application in progress...
+2020-06-13 16:33:31,402 :: INFO :: kivy :: WindowSDL: exiting mainloop and closing.
+2020-06-13 16:33:31,499 :: INFO :: SYAI-M3Play :: 'SYAI-M3Play terminated..'
+2020-06-13 16:34:38,457 :: INFO :: SYAI-M3Play :: 'SYAI-M3Play started..'
+2020-06-13 16:34:38,597 :: INFO :: kivy :: Kivy: v1.11.1
+2020-06-13 16:34:38,599 :: INFO :: kivy :: Kivy: Installed at "/usr/local/lib/python3.6/site-packages/kivy/__init__.py"
+2020-06-13 16:34:38,599 :: INFO :: kivy :: Python: v3.6.9 (default, Oct 27 2019, 00:29:13) 
+[GCC 5.4.0 20160609]
+2020-06-13 16:34:38,599 :: INFO :: kivy :: Python: Interpreter at "/home/nuru/Envs/syai3Play/bin/python"
+2020-06-13 16:34:38,839 :: INFO :: kivy :: Factory: 184 symbols loaded
+2020-06-13 16:34:39,089 :: INFO :: kivy :: Image: Providers: img_tex, img_dds, img_pil, img_gif (img_sdl2, img_ffpyplayer ignored)
+2020-06-13 16:34:39,604 :: INFO :: kivy :: Window: Provider: sdl2(['window_egl_rpi'] ignored)
+2020-06-13 16:34:40,751 :: INFO :: kivy :: GL: Using the "OpenGL" graphics system
+2020-06-13 16:34:40,754 :: INFO :: kivy :: GL: Backend used <sdl2>
+2020-06-13 16:34:40,754 :: INFO :: kivy :: GL: OpenGL version <b'2.1 Mesa 18.0.5'>
+2020-06-13 16:34:40,754 :: INFO :: kivy :: GL: OpenGL vendor <b'Intel Open Source Technology Center'>
+2020-06-13 16:34:40,755 :: INFO :: kivy :: GL: OpenGL renderer <b'Mesa DRI Mobile Intel\xc2\xae GM45 Express Chipset '>
+2020-06-13 16:34:40,755 :: INFO :: kivy :: GL: OpenGL parsed version: 2, 1
+2020-06-13 16:34:40,755 :: INFO :: kivy :: GL: Shading version <b'1.20'>
+2020-06-13 16:34:40,755 :: INFO :: kivy :: GL: Texture max size <8192>
+2020-06-13 16:34:40,755 :: INFO :: kivy :: GL: Texture max units <16>
+2020-06-13 16:34:40,889 :: INFO :: kivy :: Window: auto add sdl2 input provider
+2020-06-13 16:34:40,890 :: INFO :: kivy :: Window: virtual keyboard not allowed, single mode, not docked
+2020-06-13 16:34:40,900 :: INFO :: kivy :: Text: Provider: sdl2
+2020-06-13 16:34:40,954 :: INFO :: kivy :: AudioGstplayer: Using Gstreamer 1.8.3.0
+2020-06-13 16:34:40,963 :: INFO :: kivy :: Audio: Providers: audio_gstplayer, audio_sdl2 (audio_ffpyplayer ignored)
+2020-06-13 16:34:41,046 :: INFO :: kivy :: Loader: using a thread pool of 2 workers
+2020-06-13 16:34:41,348 :: INFO :: kivy :: Base: Start application main loop
+2020-06-13 16:34:41,356 :: INFO :: kivy :: GL: NPOT texture support is available
+2020-06-13 16:34:49,160 :: INFO :: kivy :: Base: Leaving application in progress...
+2020-06-13 16:34:49,162 :: INFO :: kivy :: WindowSDL: exiting mainloop and closing.
+2020-06-13 16:34:49,247 :: INFO :: SYAI-M3Play :: 'SYAI-M3Play terminated..'
+2020-06-13 16:34:56,916 :: INFO :: SYAI-M3Play :: 'SYAI-M3Play started..'
+2020-06-13 16:34:57,010 :: INFO :: kivy :: Kivy: v1.11.1
+2020-06-13 16:34:57,010 :: INFO :: kivy :: Kivy: Installed at "/usr/local/lib/python3.6/site-packages/kivy/__init__.py"
+2020-06-13 16:34:57,010 :: INFO :: kivy :: Python: v3.6.9 (default, Oct 27 2019, 00:29:13) 
+[GCC 5.4.0 20160609]
+2020-06-13 16:34:57,010 :: INFO :: kivy :: Python: Interpreter at "/home/nuru/Envs/syai3Play/bin/python"
+2020-06-13 16:34:57,447 :: INFO :: kivy :: Factory: 184 symbols loaded
+2020-06-13 16:34:57,869 :: INFO :: kivy :: Image: Providers: img_tex, img_dds, img_pil, img_gif (img_sdl2, img_ffpyplayer ignored)
+2020-06-13 16:34:57,957 :: INFO :: kivy :: Window: Provider: sdl2(['window_egl_rpi'] ignored)
+2020-06-13 16:34:59,165 :: INFO :: kivy :: GL: Using the "OpenGL" graphics system
+2020-06-13 16:34:59,167 :: INFO :: kivy :: GL: Backend used <sdl2>
+2020-06-13 16:34:59,168 :: INFO :: kivy :: GL: OpenGL version <b'2.1 Mesa 18.0.5'>
+2020-06-13 16:34:59,169 :: INFO :: kivy :: GL: OpenGL vendor <b'Intel Open Source Technology Center'>
+2020-06-13 16:34:59,170 :: INFO :: kivy :: GL: OpenGL renderer <b'Mesa DRI Mobile Intel\xc2\xae GM45 Express Chipset '>
+2020-06-13 16:34:59,172 :: INFO :: kivy :: GL: OpenGL parsed version: 2, 1
+2020-06-13 16:34:59,174 :: INFO :: kivy :: GL: Shading version <b'1.20'>
+2020-06-13 16:34:59,174 :: INFO :: kivy :: GL: Texture max size <8192>
+2020-06-13 16:34:59,174 :: INFO :: kivy :: GL: Texture max units <16>
+2020-06-13 16:34:59,301 :: INFO :: kivy :: Window: auto add sdl2 input provider
+2020-06-13 16:34:59,303 :: INFO :: kivy :: Window: virtual keyboard not allowed, single mode, not docked
+2020-06-13 16:34:59,312 :: INFO :: kivy :: Text: Provider: sdl2
+2020-06-13 16:34:59,406 :: INFO :: kivy :: AudioGstplayer: Using Gstreamer 1.8.3.0
+2020-06-13 16:34:59,416 :: INFO :: kivy :: Audio: Providers: audio_gstplayer, audio_sdl2 (audio_ffpyplayer ignored)
+2020-06-13 16:34:59,517 :: INFO :: kivy :: Loader: using a thread pool of 2 workers
+2020-06-13 16:34:59,762 :: INFO :: kivy :: Base: Start application main loop
+2020-06-13 16:34:59,769 :: INFO :: kivy :: GL: NPOT texture support is available
+2020-06-13 16:35:07,158 :: INFO :: kivy :: Base: Leaving application in progress...
+2020-06-13 16:35:07,161 :: INFO :: kivy :: WindowSDL: exiting mainloop and closing.
+2020-06-13 16:35:07,249 :: INFO :: SYAI-M3Play :: 'SYAI-M3Play terminated..'
+2020-06-13 17:38:42,136 :: INFO :: SYAI-M3Play :: 'SYAI-M3Play started..'
+2020-06-13 17:38:42,844 :: INFO :: kivy :: Kivy: v1.11.1
+2020-06-13 17:38:42,844 :: INFO :: kivy :: Kivy: Installed at "/usr/local/lib/python3.6/site-packages/kivy/__init__.py"
+2020-06-13 17:38:42,844 :: INFO :: kivy :: Python: v3.6.9 (default, Oct 27 2019, 00:29:13) 
+[GCC 5.4.0 20160609]
+2020-06-13 17:38:42,844 :: INFO :: kivy :: Python: Interpreter at "/home/nuru/Envs/syai3Play/bin/python"
+2020-06-13 17:38:44,925 :: INFO :: kivy :: Factory: 184 symbols loaded
+2020-06-13 17:38:46,213 :: INFO :: kivy :: Image: Providers: img_tex, img_dds, img_pil, img_gif (img_sdl2, img_ffpyplayer ignored)
+2020-06-13 17:38:47,626 :: INFO :: kivy :: Window: Provider: sdl2(['window_egl_rpi'] ignored)
+2020-06-13 17:38:49,288 :: INFO :: kivy :: GL: Using the "OpenGL" graphics system
+2020-06-13 17:38:49,291 :: INFO :: kivy :: GL: Backend used <sdl2>
+2020-06-13 17:38:49,291 :: INFO :: kivy :: GL: OpenGL version <b'2.1 Mesa 18.0.5'>
+2020-06-13 17:38:49,291 :: INFO :: kivy :: GL: OpenGL vendor <b'Intel Open Source Technology Center'>
+2020-06-13 17:38:49,291 :: INFO :: kivy :: GL: OpenGL renderer <b'Mesa DRI Mobile Intel\xc2\xae GM45 Express Chipset '>
+2020-06-13 17:38:49,291 :: INFO :: kivy :: GL: OpenGL parsed version: 2, 1
+2020-06-13 17:38:49,292 :: INFO :: kivy :: GL: Shading version <b'1.20'>
+2020-06-13 17:38:49,292 :: INFO :: kivy :: GL: Texture max size <8192>
+2020-06-13 17:38:49,292 :: INFO :: kivy :: GL: Texture max units <16>
+2020-06-13 17:38:49,758 :: INFO :: kivy :: Window: auto add sdl2 input provider
+2020-06-13 17:38:49,796 :: INFO :: kivy :: Window: virtual keyboard not allowed, single mode, not docked
+2020-06-13 17:38:49,922 :: INFO :: kivy :: Text: Provider: sdl2
+2020-06-13 17:38:50,469 :: INFO :: kivy :: AudioGstplayer: Using Gstreamer 1.8.3.0
+2020-06-13 17:38:50,683 :: INFO :: kivy :: Audio: Providers: audio_gstplayer, audio_sdl2 (audio_ffpyplayer ignored)
+2020-06-13 17:38:51,012 :: INFO :: kivy :: Loader: using a thread pool of 2 workers
+2020-06-13 17:38:51,301 :: INFO :: kivy :: Base: Start application main loop
+2020-06-13 17:38:51,369 :: INFO :: kivy :: GL: NPOT texture support is available
+2020-06-13 17:39:01,019 :: INFO :: kivy :: Base: Leaving application in progress...
+2020-06-13 17:39:01,022 :: INFO :: kivy :: WindowSDL: exiting mainloop and closing.
+2020-06-13 17:39:01,132 :: INFO :: SYAI-M3Play :: 'SYAI-M3Play terminated..'
+2020-06-13 17:39:11,264 :: INFO :: SYAI-M3Play :: 'SYAI-M3Play started..'
+2020-06-13 17:39:11,331 :: INFO :: kivy :: Kivy: v1.11.1
+2020-06-13 17:39:11,331 :: INFO :: kivy :: Kivy: Installed at "/usr/local/lib/python3.6/site-packages/kivy/__init__.py"
+2020-06-13 17:39:11,331 :: INFO :: kivy :: Python: v3.6.9 (default, Oct 27 2019, 00:29:13) 
+[GCC 5.4.0 20160609]
+2020-06-13 17:39:11,331 :: INFO :: kivy :: Python: Interpreter at "/home/nuru/Envs/syai3Play/bin/python"
+2020-06-13 17:39:11,599 :: INFO :: kivy :: Factory: 184 symbols loaded
+2020-06-13 17:39:11,780 :: INFO :: kivy :: Image: Providers: img_tex, img_dds, img_pil, img_gif (img_sdl2, img_ffpyplayer ignored)
+2020-06-13 17:39:11,875 :: INFO :: kivy :: Window: Provider: sdl2(['window_egl_rpi'] ignored)
+2020-06-13 17:39:13,050 :: INFO :: kivy :: GL: Using the "OpenGL" graphics system
+2020-06-13 17:39:13,069 :: INFO :: kivy :: GL: Backend used <sdl2>
+2020-06-13 17:39:13,069 :: INFO :: kivy :: GL: OpenGL version <b'2.1 Mesa 18.0.5'>
+2020-06-13 17:39:13,072 :: INFO :: kivy :: GL: OpenGL vendor <b'Intel Open Source Technology Center'>
+2020-06-13 17:39:13,073 :: INFO :: kivy :: GL: OpenGL renderer <b'Mesa DRI Mobile Intel\xc2\xae GM45 Express Chipset '>
+2020-06-13 17:39:13,073 :: INFO :: kivy :: GL: OpenGL parsed version: 2, 1
+2020-06-13 17:39:13,073 :: INFO :: kivy :: GL: Shading version <b'1.20'>
+2020-06-13 17:39:13,073 :: INFO :: kivy :: GL: Texture max size <8192>
+2020-06-13 17:39:13,073 :: INFO :: kivy :: GL: Texture max units <16>
+2020-06-13 17:39:13,164 :: INFO :: kivy :: Window: auto add sdl2 input provider
+2020-06-13 17:39:13,164 :: INFO :: kivy :: Window: virtual keyboard not allowed, single mode, not docked
+2020-06-13 17:39:13,189 :: INFO :: kivy :: Text: Provider: sdl2
+2020-06-13 17:39:13,257 :: INFO :: kivy :: AudioGstplayer: Using Gstreamer 1.8.3.0
+2020-06-13 17:39:13,280 :: INFO :: kivy :: Audio: Providers: audio_gstplayer, audio_sdl2 (audio_ffpyplayer ignored)
+2020-06-13 17:39:13,375 :: INFO :: kivy :: Loader: using a thread pool of 2 workers
+2020-06-13 17:39:13,610 :: INFO :: kivy :: Base: Start application main loop
+2020-06-13 17:39:13,617 :: INFO :: kivy :: GL: NPOT texture support is available
+2020-06-13 17:39:15,650 :: INFO :: kivy :: Base: Leaving application in progress...
+2020-06-13 17:39:15,674 :: INFO :: kivy :: WindowSDL: exiting mainloop and closing.
+2020-06-13 17:39:15,761 :: INFO :: SYAI-M3Play :: 'SYAI-M3Play terminated..'
+2020-06-13 17:39:19,788 :: INFO :: SYAI-M3Play :: 'SYAI-M3Play started..'
+2020-06-13 17:39:19,923 :: INFO :: kivy :: Kivy: v1.11.1
+2020-06-13 17:39:19,923 :: INFO :: kivy :: Kivy: Installed at "/usr/local/lib/python3.6/site-packages/kivy/__init__.py"
+2020-06-13 17:39:19,923 :: INFO :: kivy :: Python: v3.6.9 (default, Oct 27 2019, 00:29:13) 
+[GCC 5.4.0 20160609]
+2020-06-13 17:39:19,923 :: INFO :: kivy :: Python: Interpreter at "/home/nuru/Envs/syai3Play/bin/python"
+2020-06-13 17:39:20,151 :: INFO :: kivy :: Factory: 184 symbols loaded
+2020-06-13 17:39:20,327 :: INFO :: kivy :: Image: Providers: img_tex, img_dds, img_pil, img_gif (img_sdl2, img_ffpyplayer ignored)
+2020-06-13 17:39:20,414 :: INFO :: kivy :: Window: Provider: sdl2(['window_egl_rpi'] ignored)
+2020-06-13 17:39:21,611 :: INFO :: kivy :: GL: Using the "OpenGL" graphics system
+2020-06-13 17:39:21,615 :: INFO :: kivy :: GL: Backend used <sdl2>
+2020-06-13 17:39:21,615 :: INFO :: kivy :: GL: OpenGL version <b'2.1 Mesa 18.0.5'>
+2020-06-13 17:39:21,616 :: INFO :: kivy :: GL: OpenGL vendor <b'Intel Open Source Technology Center'>
+2020-06-13 17:39:21,616 :: INFO :: kivy :: GL: OpenGL renderer <b'Mesa DRI Mobile Intel\xc2\xae GM45 Express Chipset '>
+2020-06-13 17:39:21,616 :: INFO :: kivy :: GL: OpenGL parsed version: 2, 1
+2020-06-13 17:39:21,616 :: INFO :: kivy :: GL: Shading version <b'1.20'>
+2020-06-13 17:39:21,616 :: INFO :: kivy :: GL: Texture max size <8192>
+2020-06-13 17:39:21,616 :: INFO :: kivy :: GL: Texture max units <16>
+2020-06-13 17:39:21,721 :: INFO :: kivy :: Window: auto add sdl2 input provider
+2020-06-13 17:39:21,722 :: INFO :: kivy :: Window: virtual keyboard not allowed, single mode, not docked
+2020-06-13 17:39:21,732 :: INFO :: kivy :: Text: Provider: sdl2
+2020-06-13 17:39:21,791 :: INFO :: kivy :: AudioGstplayer: Using Gstreamer 1.8.3.0
+2020-06-13 17:39:21,800 :: INFO :: kivy :: Audio: Providers: audio_gstplayer, audio_sdl2 (audio_ffpyplayer ignored)
+2020-06-13 17:39:21,874 :: INFO :: kivy :: Loader: using a thread pool of 2 workers
+2020-06-13 17:39:22,209 :: INFO :: kivy :: Base: Start application main loop
+2020-06-13 17:39:22,216 :: INFO :: kivy :: GL: NPOT texture support is available
+2020-06-13 17:39:54,181 :: INFO :: kivy :: Base: Leaving application in progress...
+2020-06-13 17:39:54,183 :: INFO :: kivy :: WindowSDL: exiting mainloop and closing.
+2020-06-13 17:39:54,299 :: INFO :: SYAI-M3Play :: 'SYAI-M3Play terminated..'

@@ -38,7 +38,7 @@ def routine_001():
         sys_size = pysize()
         width, height = stringedArray_2_array(size, int)
         x_axis = str((sys_size[0] - width) // 2)
-        y_axis = str((sys_size[1] - height) // 2)
+        y_axis = str((sys_size[1] - height) // 3)
 
         return {
             'width': width,

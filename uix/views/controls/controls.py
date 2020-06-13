@@ -76,7 +76,7 @@ class TimeCounterComponent(BLayout):
 
     def activate(self):
         self.disabled = False
-        bar = self.ids.progress_bar
+        bar = self.progress_bar
         bar.calculate_from_ratio(0)
         bar.handle_color[-1] = 1
         bar.cover_color[-1] = .2
@@ -84,7 +84,7 @@ class TimeCounterComponent(BLayout):
 
     def deactivate(self):
         self.disabled = True
-        bar = self.ids.progress_bar
+        bar = self.progress_bar
         bar.calculate_from_ratio(0)
         self.lap = self.last = ''
         bar.handle_color[-1] = bar.progress_color[-1] = bar.cover_color[-1] = 0
@@ -92,12 +92,16 @@ class TimeCounterComponent(BLayout):
     def on_seek(self, *_):
         pass
 
+    @property
+    def progress_bar(self):
+        return self.ids.progress_bar
+
     def set_last(self, last):
         self.last = format_timeframe(last)
 
     def set_lap(self, lap, ratio):
         self.lap = format_timeframe(lap)
-        self.ids.progress_bar.calculate_from_ratio(ratio)
+        self.progress_bar.calculate_from_ratio(ratio)
 
 
 class VolumeTunerComponent(BLayout):
@@ -109,8 +113,12 @@ class VolumeTunerComponent(BLayout):
     def on_ids(self, *_):
         self._set_initial_vol()
 
+    @property
+    def volume_bar(self):
+        return self.ids.vol_stat
+
     def _set_initial_vol(self):
-        self.ids.vol_stat.value_ratio = float(cfg_getter('MODULAR', 'volume'))
+        self.volume_bar.value_ratio = float(cfg_getter('MODULAR', 'volume'))
 
 
 class ModularControlsComponent(BLayout):
@@ -144,6 +152,10 @@ class ModularControlsComponent(BLayout):
 
     def on_next(self, *_):
         pass
+
+    @property
+    def vol_display(self):
+        return self.ids.vol_display
 
     @property
     def time_display(self):

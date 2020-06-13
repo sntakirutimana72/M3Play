@@ -4,6 +4,7 @@ from utils.cfg import cfg_getter
 from threading import Thread, Lock
 from utils.workers import OpsWorker
 from protocols.resize import resize
+from kivy.core.window import Window
 from kivy.core.audio import SoundLoader
 from kivy.clock import mainthread, Clock
 from uix.components.layers import BLayout
@@ -14,26 +15,108 @@ from utils.helpers import stringedArray_2_array, get_metadata
 from uix.views.controls import ModularControlsComponent, FooterDisplayComponent
 
 
-class keypad_routine(object):
-    pass
+class Keypad_dirs(object):
+
+    def _keypad_closed(self):
+        """ This method is called when the keypad instance is released """
+        pass
+
+    def __init__(self, **kwargs):
+        super(Keypad_dirs, self).__init__(**kwargs)
+        self._keypad = None
+        Window.bind(on_cursor_enter=self._on_cursor_enter,
+                    on_cursor_leave=self._on_cursor_leave
+                    )
+
+    def _on_cursor_leave(self, _):
+        """ This observes the mouse motion once stepped out of this instance canvas """
+        try:
+            if self._keypad:
+                self._keypad.unbind(on_key_down=self._on_key_down)
+                self._keypad = None
+        except Exception as e:
+            ilogging(e)
+
+    def _on_key_down(self, *largs):
+        """ This method listens and dispatches relevant actions in relations to a key event occurred """
+        # This keypad-directive toggles playlist-manager
+        if largs[2] == 'e' or largs[2] == 'E':
+            self._on_toggle_playlist()
+            return
+
+        if not self._controls.disabled:
+            # This keypad-directive initiates, freezes and resumes a playing activity
+            if largs[1][1] == 'spacebar':
+                self._on_play_pause(self._controls.play_pause)
+                return
+            # This keypad-directive changes volume level up and down
+            if largs[1][1] in ('up', 'down') and 'ctrl' in largs[3]:
+                jump_at = .05 if largs[1][1] == 'up' else -.05
+                jump_at += self._controls.volume
+                self._controls.vol_display.volume_bar.calculate_from_ratio(jump_at, True)
+                return
+            # This keypad-directive mutes and un-mutes the modular and the volume controls
+            # Although it utilizes the same method to do so with its counter-parts
+            if largs[2] == 'm' or largs[2] == 'M':
+                self._controls.vol_display.volume_bar.calculate_from_ratio(-1, True)
+                return
+            # This keypad-directive changes the looping state
+            if largs[2] == 'l' or largs[2] == 'L':
+                self._on_loop(self._controls.looping)
+                return
+            # This keypad-directive changes the shuffling state
+            if largs[2] == 'r' or largs[2] == 'R':
+                self._on_shuffle(self._controls.shuffling)
+                return
+
+            if self._is_alive():
+                # This keypad-directive stops the playing activity if on
+                if largs[2] == 's' or largs[2] == 'S':
+                    self._on_stop()
+                # This keypad-directive invokes a next routine whereby a next-media available takes turn
+                elif largs[2] == 'n' or largs[2] == 'N':
+                    self._on_next()
+                # This keypad-directive invokes a preview routine whereby a previous-media available takes turn
+                elif largs[2] == 'p' or largs[2] == 'P':
+                    self._on_previous()
+                # This keypad-directive winds and rewinds the playing media 5 sec after and 5 sec before, respectively
+                elif largs[1][1] in ('right', 'left') and 'shift' in largs[3]:
+                    current_pos, duration = self._current_pos, self._duration
+                    jump_at = 5 if largs[1][1] == 'right' else -5
+                    jump_at = jump_at / duration + current_pos
+                    self._controls.time_display.progress_bar.calculate_from_ratio(jump_at, True)
+
+    def _on_cursor_enter(self, window):
+        """ This method observes the mouse motion when it enters this instance canvas """
+
+        if self._keypad is None:
+            self._keypad = window.request_keyboard(self._keypad_closed, self)
+            self._keypad.bind(on_key_down=self._on_key_down)
 
 
-class minimize_routine(object):
-    pass
+class PPlayOnMRestore(object):
+
+    def __init__(self, **kwargs):
+        super(PPlayOnMRestore, self).__init__(**kwargs)
+        Clock.schedule_once(self._set_mini_restore_observers, 1)
+
+    def _on_mini__restore(self, *_):
+        self._on_play_pause(self._controls.play_pause)
+
+    def _set_mini_restore_observers(self, *_):
+        Window.bind(
+            on_restore=self._on_mini__restore,
+            on_minimize=self._on_mini__restore
+        )
 
 
-class M3Play(BLayout, keypad_routine, minimize_routine):
+class M3Play(BLayout, Keypad_dirs, PPlayOnMRestore):
     __events__ = ('on_lap_time', )
 
     def _resume(self):
         self._modular.play()
         self._flag_all_motion_responses(True)
         Clock.schedule_interval(self._ready_all_tools_from_duration, .01)
-
-    def _run_get_pos(self):
-        pos_getter = Thread(target=self._get_pos)
-        pos_getter.daemon = True
-        pos_getter.start()
 
     @property
     def playlist(self):
@@ -91,6 +174,11 @@ class M3Play(BLayout, keypad_routine, minimize_routine):
             self._modular.stop()
             self._flag_all_motion_responses(False)
 
+    def _run_get_pos(self):
+        pos_getter = Thread(target=self._get_pos)
+        pos_getter.daemon = True
+        pos_getter.start()
+
     def _now_playing(self):
         metadata = self._metadata
         self._metadata = None
@@ -132,11 +220,26 @@ class M3Play(BLayout, keypad_routine, minimize_routine):
 
         largs[-1].toggle()
 
+    def _on_play_pause(self, *_):
+        if self._is_alive():
+            state = self._modular.state
+            if state == 'stop':
+                if self._state == 'pause':
+                    self._resume()
+                else:
+                    self._load_next()
+            else:
+                self._set_pause()
+                self._async_stop()
+                self._modular.volume = 0
+        else:
+            self._load_next()
+
     def _add_UI_components(self):
         """ This method initiates UI components of the this class instance """
         # Outer Layout
         secondary_layout = BLayout(
-            spacing='1dp', padding='1dp', orientation='vertical',
+            spacing='1dp', padding='2dp', orientation='vertical',
             background_color=self.border
         )
         # Instantiate HeadBar Component
@@ -211,23 +314,8 @@ class M3Play(BLayout, keypad_routine, minimize_routine):
         if parent and self._ops_handler is None:
             self._init_ops_handler()
 
-    def _on_toggle_playlist(self, _):
+    def _on_toggle_playlist(self, *_):
         resize(self.get_root_window())
-
-    def _on_play_pause(self, *largs):
-        if self._is_alive():
-            state = self._modular.state
-            if state == 'stop':
-                if self._state == 'pause':
-                    self._resume()
-                else:
-                    self._load_next()
-            else:
-                self._set_pause()
-                self._async_stop()
-                self._modular.volume = 0
-        else:
-            self._load_next()
 
     def __play__(self, source: object):
         try:
@@ -270,12 +358,12 @@ class M3Play(BLayout, keypad_routine, minimize_routine):
 
     def _on_adjust_volume(self, *largs):
         if self._modular:
-            self._modular.volume = largs[-1]
+            self._modular.volume = largs[1]
 
     def __init__(self, *largs, **kwargs):
         super(M3Play, self).__init__(**kwargs)
         self.border = None
-        self.padding = '2dp'
+        self.padding = '1dp'
 
         self._state = None
         self._options = {}

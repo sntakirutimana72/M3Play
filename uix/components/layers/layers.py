@@ -62,9 +62,12 @@ class ScrollableLabelComponent(ScrollView, Hovering):
             self._start_animation()
 
     def _loopTime(self, *_):
-        if _:
-            return self._view_port.width * 35 / 800
-        return self.width * 35 / 800
+        """ This is a custom algorithm to compute how much time to animate which size
+        .. Example: The starting point is 800dp-scale in 35-seconds
+        ... So, in effect the formula is as: Animation-Time = size * 35 / 800
+        """
+        size_tether = self.width if _ else self._view_port.width
+        return size_tether * 35 / 800
 
     def on_text(self, *largs):
         self._view_port.text = largs[1]

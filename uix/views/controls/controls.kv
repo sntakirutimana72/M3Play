@@ -1,13 +1,13 @@
 #: import ProgressBarComponent uix.components.bars.ProgressBarComponent
 
 <TimeCounter@Label>:
+    bold: True
     valign: 'middle'
     size_hint_x: None
-    font_name: 'courbd'
-    color: [0, 0, .1, .7]
+    color: [.03, .03, .07, 1]
     disabled_color: self.color
     text_size: None, self.size[1]
-    font_size: dp(min(*self.size) // 2 + 1)
+    font_size: dp(min(*self.size) // 2)
     width: max(self.texture_size[0], dp(50))
 
 
@@ -89,6 +89,7 @@
         valign: 'middle'
         size_hint_x: None
         color: [0, 0, 0, 1]
+        disabled_color: self.color
         font_size: dp(min(*self.size) // 2 - 1)
     ScrollableLabelComponent:
         id: name
@@ -107,7 +108,7 @@
 
     TimeCounterComponent:
         id: time_display
-        on_seek: root.dispatch('on_seek', args[-1])
+        on_seek: root.dispatch('on_seek', args[1])
     BoxLayout:
         spacing: '10dp'
         padding: '17dp', '3dp'
@@ -118,7 +119,7 @@
         ControlInterBTComponent:
             id: shuffling
             indicator: 'shuffle'
-            on_release: root.dispatch('on_shuffle', *args)
+            on_release: root.dispatch('on_shuffle', args[0])
         ControlBTComponent:
             icon_name: 'previous.png'
             on_release: root.dispatch('on_previous')
@@ -126,14 +127,14 @@
             id: p_pause
             indicator: 'pause_play'
             icon_name: 'play.png'
-            on_release: root.dispatch('on_play_pause', *args)
+            on_release: root.dispatch('on_play_pause', args[0])
         ControlBTComponent:
             icon_name: 'next.png'
             on_release: root.dispatch('on_next')
         ControlInterBTComponent:
             id: looping
             indicator: 'loop'
-            on_release: root.dispatch('on_loop', *args)
+            on_release: root.dispatch('on_loop', args[0])
         BoxLayout:
             size_hint_x: None
             width: vol_display.width
