@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="94817b2e-3ace-413a-92f9-7e2bdca9dd9e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/nuru.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/nuru.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/protocols/startup.py" beforeDir="false" afterPath="$PROJECT_DIR$/protocols/startup.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/res/Logs/June-2020.log" beforeDir="false" afterPath="$PROJECT_DIR$/res/Logs/June-2020.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.ini" beforeDir="false" afterPath="$PROJECT_DIR$/settings.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uix/components/bars/interface.py" beforeDir="false" afterPath="$PROJECT_DIR$/uix/components/bars/interface.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uix/components/layers/layers.py" beforeDir="false" afterPath="$PROJECT_DIR$/uix/components/layers/layers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uix/views/controls/controls.kv" beforeDir="false" afterPath="$PROJECT_DIR$/uix/views/controls/controls.kv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uix/views/controls/controls.py" beforeDir="false" afterPath="$PROJECT_DIR$/uix/views/controls/controls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uix/views/m3Play.py" beforeDir="false" afterPath="$PROJECT_DIR$/uix/views/m3Play.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
