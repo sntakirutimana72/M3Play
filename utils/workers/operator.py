@@ -64,9 +64,9 @@ class OpsWorker(EventDispatcher):
                 playlist.playlist.add_widget(dropped_uix_interface)
 
             _media_file_obj = await self._dropped_files.get()
+            self._dropped_files.task_done()
             _add_dropped_file_widget(_media_file_obj)
 
-            self._dropped_files.task_done()
             await asyncio.sleep(.01)
 
     def submit_startup_load(self, load):
@@ -85,24 +85,22 @@ class OpsWorker(EventDispatcher):
 
     @staticmethod
     def _is_allowed(source):
-        """ This method validate the file source and return a file path object or a NoneType """
+        """ This method validate the file source and return a file path object """
         file_object = Path(source)
         if is_format_allowed(file_object) and file_object.exists():
             return file_object
-        return
-
-    def __run__(self):
-        """ Bind dropping event on local method
-
-        .. Window.bind(on_dropfile=self._on_dropping_files)
-        """
-        Window.bind(on_dropfile=self._on_dropping_files)
 
     def _start(self):
         self.loop = asyncio.get_event_loop_policy().new_event_loop()
         asyncio.set_event_loop(self.loop)
-        self.__run__()
+        self._run()
         self.loop.run_forever()
+
+    def _run(self):
+        """ Bind dropping event on local method
+        ... Window.bind(on_dropfile=self._on_dropping_files)
+        """
+        Window.bind(on_dropfile=self._on_dropping_files)
 
     def run(self):
         self._thread_runner.start()

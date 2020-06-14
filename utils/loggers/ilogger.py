@@ -1,25 +1,25 @@
 __all__ = ('ilogging', )
 
+from pathlib import Path
+from datetime import datetime
+from utils.envs import res_dir
+from logging import basicConfig, DEBUG, getLogger
+    
 __logger__ = None
 
 
 def __setup__():
-    from os import path, makedirs
-    from datetime import datetime
-    from utils.envs import res_dir
-    from logging import basicConfig, DEBUG, getLogger
-
     global __logger__
 
-    logfile_env = path.join(res_dir(), 'Logs')
-    if not path.exists(logfile_env):
+    logs_path = Path(res_dir()) / 'Logs'
+    if not logs_path.exists():
         try:
-            makedirs(logfile_env)
+            logs_path.mkdir(parents=True)
         except:
             pass
 
-    logfile_name = datetime.now().strftime('%B-%Y')
-    basicConfig(filename=path.join(logfile_env, logfile_name + '.log'),
+    logfile_name = logs_path.joinpath(datetime.now().strftime('%B-%Y') + '.log')
+    basicConfig(filename=logfile_name,
                 format='%(asctime)s :: %(levelname)s :: %(name)s :: %(message)s')
     __logger__ = getLogger('SYAI-M3Play')
     __logger__.setLevel(DEBUG)

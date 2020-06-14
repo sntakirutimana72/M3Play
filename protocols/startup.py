@@ -32,11 +32,11 @@ def routine_001():
     from utils.cfg import cfg_getter
     from utils.loggers import ilogging
     from pyautogui import size as pysize
-    from utils.helpers import stringedArray_2_array
+    from utils.helpers import strArray_to_tuple
 
     def _sub_routine(size: str) -> dict:
         sys_size = pysize()
-        width, height = stringedArray_2_array(size, int)
+        width, height = strArray_to_tuple(size, int)
         x_axis = str((sys_size[0] - width) // 2)
         y_axis = str((sys_size[1] - height) // 3)
 

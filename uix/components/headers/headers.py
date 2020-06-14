@@ -10,7 +10,7 @@ from kivy.uix.widget import Widget
 from protocols.resize import resize
 from kivy.uix.boxlayout import BoxLayout
 from uix.components.layers import BLayout
-from utils.helpers import stringedArray_2_array
+from utils.helpers import strArray_to_tuple
 from uix.components.behaviors import Dragging, Hovering
 from kivy.properties import NumericProperty, StringProperty, ListProperty, OptionProperty
 
@@ -87,8 +87,8 @@ class AppHeadBarComponent(HeadBarComponent):
         try:
             configs = dict(cfg_getter('HEADER'))
             self.title = configs['title']
-            self.title_color = stringedArray_2_array(configs['color'])
-            self.background_color = stringedArray_2_array(configs['background'])
+            self.title_color = strArray_to_tuple(configs['color'])
+            self.background_color = strArray_to_tuple(configs['background'])
         except Exception as e:
             ilogging(e)
 

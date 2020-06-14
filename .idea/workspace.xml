@@ -3,6 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="94817b2e-3ace-413a-92f9-7e2bdca9dd9e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/protocols/startup.py" beforeDir="false" afterPath="$PROJECT_DIR$/protocols/startup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Icons/green.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Icons/yellow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/Logs/June-2020.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.ini" beforeDir="false" afterPath="$PROJECT_DIR$/settings.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uix/components/headers/headers.py" beforeDir="false" afterPath="$PROJECT_DIR$/uix/components/headers/headers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uix/components/layers/layers.py" beforeDir="false" afterPath="$PROJECT_DIR$/uix/components/layers/layers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uix/views/controls/controls.kv" beforeDir="false" afterPath="$PROJECT_DIR$/uix/views/controls/controls.kv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uix/views/controls/controls.py" beforeDir="false" afterPath="$PROJECT_DIR$/uix/views/controls/controls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/uix/views/m3Play.py" beforeDir="false" afterPath="$PROJECT_DIR$/uix/views/m3Play.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/helpers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/helpers/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/helpers/formatters.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/helpers/formatters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/loggers/ilogger.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/loggers/ilogger.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/workers/operator.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/workers/operator.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +51,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../ViPlayer" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -133,34 +148,34 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="350" y="204" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1591452510861">
+    <state x="350" y="204" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1592158687924">
       <screen x="53" y="24" width="1227" height="776" />
     </state>
-    <state x="350" y="204" key="#com.intellij.fileTypes.FileTypeChooser/53.24.1227.776@53.24.1227.776" timestamp="1591452510861" />
+    <state x="350" y="204" key="#com.intellij.fileTypes.FileTypeChooser/53.24.1227.776@53.24.1227.776" timestamp="1592158687924" />
     <state x="453" y="157" key="FileChooserDialogImpl" timestamp="1592060278034">
       <screen x="53" y="24" width="1227" height="776" />
     </state>
     <state x="453" y="157" key="FileChooserDialogImpl/53.24.1227.776@53.24.1227.776" timestamp="1592060278034" />
-    <state width="1183" height="213" key="GridCell.Tab.0.bottom" timestamp="1592062851639">
+    <state width="1183" height="213" key="GridCell.Tab.0.bottom" timestamp="1592163040016">
       <screen x="53" y="24" width="1227" height="776" />
     </state>
     <state width="1346" height="223" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1591625488480" />
-    <state width="1183" height="213" key="GridCell.Tab.0.bottom/53.24.1227.776@53.24.1227.776" timestamp="1592062851639" />
-    <state width="1183" height="213" key="GridCell.Tab.0.center" timestamp="1592062851637">
+    <state width="1183" height="213" key="GridCell.Tab.0.bottom/53.24.1227.776@53.24.1227.776" timestamp="1592163040016" />
+    <state width="1183" height="213" key="GridCell.Tab.0.center" timestamp="1592163040012">
       <screen x="53" y="24" width="1227" height="776" />
     </state>
     <state width="1346" height="223" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1591625488480" />
-    <state width="1183" height="213" key="GridCell.Tab.0.center/53.24.1227.776@53.24.1227.776" timestamp="1592062851637" />
-    <state width="1183" height="213" key="GridCell.Tab.0.left" timestamp="1592062851636">
+    <state width="1183" height="213" key="GridCell.Tab.0.center/53.24.1227.776@53.24.1227.776" timestamp="1592163040012" />
+    <state width="1183" height="213" key="GridCell.Tab.0.left" timestamp="1592163040011">
       <screen x="53" y="24" width="1227" height="776" />
     </state>
     <state width="1346" height="223" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1591625488480" />
-    <state width="1183" height="213" key="GridCell.Tab.0.left/53.24.1227.776@53.24.1227.776" timestamp="1592062851636" />
-    <state width="1183" height="213" key="GridCell.Tab.0.right" timestamp="1592062851638">
+    <state width="1183" height="213" key="GridCell.Tab.0.left/53.24.1227.776@53.24.1227.776" timestamp="1592163040011" />
+    <state width="1183" height="213" key="GridCell.Tab.0.right" timestamp="1592163040014">
       <screen x="53" y="24" width="1227" height="776" />
     </state>
     <state width="1346" height="223" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1591625488480" />
-    <state width="1183" height="213" key="GridCell.Tab.0.right/53.24.1227.776@53.24.1227.776" timestamp="1592062851638" />
+    <state width="1183" height="213" key="GridCell.Tab.0.right/53.24.1227.776@53.24.1227.776" timestamp="1592163040014" />
     <state width="1346" height="223" key="GridCell.Tab.1.bottom" timestamp="1591625488480">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -177,11 +192,15 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1346" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1591625488480" />
-    <state x="205" y="34" key="SettingsEditor" timestamp="1591902363051">
+    <state x="175" y="35" key="SettingsEditor" timestamp="1592155621012">
       <screen x="53" y="24" width="1227" height="776" />
     </state>
     <state x="169" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1591603940898" />
-    <state x="205" y="34" key="SettingsEditor/53.24.1227.776@53.24.1227.776" timestamp="1591902363051" />
+    <state x="175" y="35" key="SettingsEditor/53.24.1227.776@53.24.1227.776" timestamp="1592155621012" />
+    <state x="340" y="19" width="634" height="746" key="find.popup" timestamp="1592156774250">
+      <screen x="53" y="24" width="1227" height="776" />
+    </state>
+    <state x="340" y="19" width="634" height="746" key="find.popup/53.24.1227.776@53.24.1227.776" timestamp="1592156774250" />
     <state x="329" y="121" width="672" height="678" key="search.everywhere.popup" timestamp="1591382265033">
       <screen x="53" y="24" width="1227" height="776" />
     </state>

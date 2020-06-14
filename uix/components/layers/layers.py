@@ -51,7 +51,7 @@ class ScrollableLabelComponent(ScrollView, Hovering):
     _isLoading = None
     _animation_loader = None
     _animation_scheduler = None
-    color = ListProperty([0, 0, .1, 1])
+    color = ListProperty([0, 0, .07, 1])
     text = StringProperty('No Track Playing')
     bar_inactive_color = bar_color = [0, 0, 0, 0]
     effect_cls = ObjectProperty(OpacityScrollEffect)
@@ -63,7 +63,7 @@ class ScrollableLabelComponent(ScrollView, Hovering):
 
     def _loopTime(self, *_):
         """ This is a custom algorithm to compute how much time to animate which size
-        .. Example: The starting point is 800dp-scale in 35-seconds
+        ... Example: The starting point is 800dp-scale in 35-seconds
         ... So, in effect the formula is as: Animation-Time = size * 35 / 800
         """
         size_tether = self.width if _ else self._view_port.width

@@ -11,7 +11,7 @@ from uix.components.layers import BLayout
 from utils.loggers import ilogging, elogging
 from uix.components.headers import AppHeadBarComponent
 from uix.views.playlist import PlaylistManagerComponent
-from utils.helpers import stringedArray_2_array, get_metadata
+from utils.helpers import strArray_to_tuple, get_metadata
 from uix.views.controls import ModularControlsComponent, FooterDisplayComponent
 
 
@@ -244,6 +244,7 @@ class M3Play(BLayout, Keypad_dirs, PPlayOnMRestore):
         )
         # Instantiate HeadBar Component
         secondary_layout.add_widget(AppHeadBarComponent())
+
         # Adding modular-controls to root widget
         self._controls = ModularControlsComponent(
             background_color=self.border,
@@ -253,9 +254,11 @@ class M3Play(BLayout, Keypad_dirs, PPlayOnMRestore):
         )
         self._controls.bind(volume=self._on_adjust_volume)
         secondary_layout.add_widget(self._controls)
+
         # Creating & adding playlist-manager to root widget
         self._playlist_manager = PlaylistManagerComponent(root=self)
         secondary_layout.add_widget(self._playlist_manager)
+
         # Creating & adding footer-display to root-widget
         self._footer = FooterDisplayComponent(
             on_toggle_playlist=self._on_toggle_playlist,
@@ -282,7 +285,7 @@ class M3Play(BLayout, Keypad_dirs, PPlayOnMRestore):
         try:
             colors = []
             for option, value in cfg_getter('MAIN'):
-                colors.append(stringedArray_2_array(value))
+                colors.append(strArray_to_tuple(value))
             self.background_color, self.border = colors
             del colors
 
@@ -299,10 +302,12 @@ class M3Play(BLayout, Keypad_dirs, PPlayOnMRestore):
     def _on_state(self, _, state):
         if self._state is None and state == 'stop':
             self._update_UI_states(state)
+
             if self._options['force'] is False:
                 self._load_next()
             elif self._options['force']:
                 self._reset_all()
+
         elif self._loop_ignore is None:
             self._loop_ignore = False
 
@@ -315,6 +320,7 @@ class M3Play(BLayout, Keypad_dirs, PPlayOnMRestore):
             self._init_ops_handler()
 
     def _on_toggle_playlist(self, *_):
+        """ This method expands & collapses playlist library """
         resize(self.get_root_window())
 
     def __play__(self, source: object):

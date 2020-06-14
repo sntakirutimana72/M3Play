@@ -79,7 +79,7 @@ class TimeCounterComponent(BLayout):
         bar = self.progress_bar
         bar.calculate_from_ratio(0)
         bar.handle_color[-1] = 1
-        bar.cover_color[-1] = .2
+        bar.cover_color[-1] = .1
         bar.progress_color[-1] = .6
 
     def deactivate(self):
