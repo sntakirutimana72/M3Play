@@ -1,0 +1,40 @@
+Index: res/Logs/June-2020.log
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- res/Logs/June-2020.log	(revision 0c51054a131316aab133a45482103b6cc382122c)
++++ res/Logs/June-2020.log	(date 1592198647743)
+@@ -1,0 +1,32 @@
++2020-06-15 07:24:00,950 :: INFO :: SYAI-M3Play :: 'SYAI-M3Play started..'
++2020-06-15 07:24:01,043 :: INFO :: kivy :: deps: Successfully imported "kivy_deps.gstreamer" 0.1.18
++2020-06-15 07:24:01,043 :: INFO :: kivy :: deps: Successfully imported "kivy_deps.glew" 0.1.12
++2020-06-15 07:24:01,043 :: INFO :: kivy :: deps: Successfully imported "kivy_deps.sdl2" 0.1.23
++2020-06-15 07:24:01,043 :: INFO :: kivy :: Kivy: v1.11.1
++2020-06-15 07:24:01,043 :: INFO :: kivy :: Kivy: Installed at "C:\Users\English Lab\Envs\syai3Play\lib\site-packages\kivy\__init__.py"
++2020-06-15 07:24:01,043 :: INFO :: kivy :: Python: v3.6.8 (tags/v3.6.8:3c6b436a57, Dec 24 2018, 00:16:47) [MSC v.1916 64 bit (AMD64)]
++2020-06-15 07:24:01,043 :: INFO :: kivy :: Python: Interpreter at "C:\Users\English Lab\Envs\syai3Play\Scripts\python.exe"
++2020-06-15 07:24:01,606 :: INFO :: kivy :: Factory: 184 symbols loaded
++2020-06-15 07:24:02,059 :: INFO :: kivy :: Image: Providers: img_tex, img_dds, img_sdl2, img_pil, img_gif (img_ffpyplayer ignored)
++2020-06-15 07:24:02,449 :: INFO :: kivy :: Window: Provider: sdl2
++2020-06-15 07:24:02,700 :: INFO :: kivy :: GL: Using the "OpenGL" graphics system
++2020-06-15 07:24:02,701 :: INFO :: kivy :: GL: GLEW initialization succeeded
++2020-06-15 07:24:02,701 :: INFO :: kivy :: GL: Backend used <glew>
++2020-06-15 07:24:02,701 :: INFO :: kivy :: GL: OpenGL version <b'4.5.0 - Build 23.20.16.4849'>
++2020-06-15 07:24:02,702 :: INFO :: kivy :: GL: OpenGL vendor <b'Intel'>
++2020-06-15 07:24:02,702 :: INFO :: kivy :: GL: OpenGL renderer <b'Intel(R) HD Graphics 510'>
++2020-06-15 07:24:02,702 :: INFO :: kivy :: GL: OpenGL parsed version: 4, 5
++2020-06-15 07:24:02,702 :: INFO :: kivy :: GL: Shading version <b'4.50 - Build 23.20.16.4849'>
++2020-06-15 07:24:02,702 :: INFO :: kivy :: GL: Texture max size <16384>
++2020-06-15 07:24:02,702 :: INFO :: kivy :: GL: Texture max units <32>
++2020-06-15 07:24:02,878 :: INFO :: kivy :: Window: auto add sdl2 input provider
++2020-06-15 07:24:02,881 :: INFO :: kivy :: Window: virtual keyboard not allowed, single mode, not docked
++2020-06-15 07:24:03,145 :: INFO :: kivy :: Text: Provider: sdl2
++2020-06-15 07:24:03,396 :: INFO :: kivy :: AudioGstplayer: Using Gstreamer 1.16.0.0
++2020-06-15 07:24:03,455 :: INFO :: kivy :: Audio: Providers: audio_gstplayer, audio_sdl2 (audio_ffpyplayer ignored)
++2020-06-15 07:24:03,506 :: INFO :: kivy :: Loader: using a thread pool of 2 workers
++2020-06-15 07:24:03,639 :: INFO :: kivy :: Base: Start application main loop
++2020-06-15 07:24:03,642 :: INFO :: kivy :: GL: NPOT texture support is available
++2020-06-15 07:24:07,673 :: INFO :: kivy :: Base: Leaving application in progress...
++2020-06-15 07:24:07,674 :: INFO :: kivy :: WindowSDL: exiting mainloop and closing.
++2020-06-15 07:24:07,743 :: INFO :: SYAI-M3Play :: 'SYAI-M3Play terminated..'

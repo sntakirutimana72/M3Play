@@ -100,13 +100,18 @@ class PPlayOnMRestore(object):
         super(PPlayOnMRestore, self).__init__(**kwargs)
         Clock.schedule_once(self._set_mini_restore_observers, 1)
 
-    def _on_mini__restore(self, *_):
-        self._on_play_pause(self._controls.play_pause)
+    def _on_restore_play(self, *_):
+        if not self._controls.disabled and self._is_alive() and self._state:
+            self._on_play_pause(self._controls.play_pause)
+
+    def _on_minimize_pause(self, *_):
+        if not self._controls.disabled and self._is_alive() and self._state is None:
+            self._on_play_pause(self._controls.play_pause)
 
     def _set_mini_restore_observers(self, *_):
         Window.bind(
-            on_restore=self._on_mini__restore,
-            on_minimize=self._on_mini__restore
+            on_restore=self._on_restore_play,
+            on_minimize=self._on_minimize_pause
         )
 
 
