@@ -333,7 +333,7 @@ class M3Play(BLayout, Keypad_dirs, PPlayOnMRestore):
             self._flag_all_motion_responses(True)
             if self._modular is None:
                 self._modular = SoundLoader().load(str(source))
-                if isinstance(self._modular, SoundLoader):
+                if isinstance(self._modular, SoundLoader) or self._modular is None:
                     raise Exception('Unable to load source file')
                 self._flag_modular(True)
             else:
@@ -342,7 +342,7 @@ class M3Play(BLayout, Keypad_dirs, PPlayOnMRestore):
         except Exception as e:
             ilogging(e)
         finally:
-            if isinstance(self._modular, SoundLoader):
+            if isinstance(self._modular, SoundLoader) or self._modular is None:
                 elogging()
                 self._modular = None
                 self._flag_all_motion_responses(False)
